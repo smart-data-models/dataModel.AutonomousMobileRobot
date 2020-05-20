@@ -3,11 +3,7 @@ Data models related with Autonomous Mobile Robots
 
 If you want to find use cases of use you have to visit [CURRENT-ADOPTERS.md](CURRENT-ADOPTERS.md) 
 
-# [Subject] Data Models
-
 Create an [issue](https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/issues) for questions regarding this model
-
-
 
 This subject contains data models for:
 
