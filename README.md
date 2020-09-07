@@ -7,7 +7,7 @@ Create an [issue](https://github.com/smart-data-models/dataModel.AutonomousMobil
 
 This subject contains data models for:
 
-This repo is under constrution and no data models have been released.
+This repo is under construction and no data models have been released.
 
 (to be define, just created)
 -   [Datamodel1](https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/object1)
