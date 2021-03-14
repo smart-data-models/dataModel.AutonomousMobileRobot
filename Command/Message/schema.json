@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/Command/Message/schema.json",
+  "type": "object",
+  "properties": {
+    "type": { "$ref": "https://fiware.github.io/data-models/specs/Robot/schema.json#/definitions/type" },
+    "time": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/schema.json#/definitions/time",
+      "description": "Send time"
+    },
+    "command": { "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/command" },
+    "waypoints": { "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/waypoints" }
+  },
+  "required": ["id", "type", "time", "command", "waypoints"],
+  "additionalProperties": false
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/Command/ReturnMessage/schema.json",
+  "type": "object",
+  "properties": {
+    "type": { "$ref": "https://fiware.github.io/data-models/specs/Robot/schema.json#/definitions/type" },
+    "time": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/schema.json#/definitions/time",
+      "description": "Send time"
+    },
+    "receivedTime": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/time",
+      "description": "Received time"
+    },
+    "receivedCommand": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/command",
+      "description": "Received command"
+    },
+    "receivedWaypoints": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/waypoints",
+      "description": "Received list of waypoints"
+    },
+    "result": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/results",
+      "description": "Reaction of the command"
+    },
+    "errors": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/errors",
+      "description": "Error messages"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "time",
+    "receivedTime",
+    "receivedCommand",
+    "receivedWaypoints",
+    "result",
+    "errors"
+  ],
+  "additionalProperties": false
+}
