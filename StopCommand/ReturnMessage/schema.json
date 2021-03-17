@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/EmergencyCommand/ReturnMessage/schema.json",
+  "$id": "https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/EmergencyCommand/ReturnMessage/schema.json",
   "type": "object",
   "properties": {
     "type": { "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/type" },
@@ -35,5 +35,5 @@
     "result",
     "errors"
   ],
-  "additionalProperties": false
+  "additionalProperties": true
 }

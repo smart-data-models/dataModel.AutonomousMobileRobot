@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/Command/ReturnMessage/schema.json",
+  "$id": "https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/Command/ReturnMessage/schema.json",
   "type": "object",
   "properties": {
     "type": { "$ref": "https://fiware.github.io/data-models/specs/Robot/schema.json#/definitions/type" },
@@ -19,6 +19,10 @@
     "receivedWaypoints": {
       "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/waypoints",
       "description": "Received list of waypoints"
+    },
+    "receivedDestination": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/destination",
+      "description": "Received destination"
     },
     "result": {
       "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/results",
@@ -39,5 +43,5 @@
     "result",
     "errors"
   ],
-  "additionalProperties": false
+  "additionalProperties": true
 }

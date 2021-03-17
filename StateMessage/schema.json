@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/StateMessage/schema.json",
+  "$id": "https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/StateMessage/schema.json",
   "type": "object",
   "properties": {
     "type": { "$ref": "https://fiware.github.io/data-models/specs/Robot/schema.json#/definitions/type" },
@@ -44,5 +44,5 @@
     "accuracy",
     "battery"
   ],
-  "additionalProperties": false
+  "additionalProperties": true
 }
