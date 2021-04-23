@@ -3,33 +3,33 @@
   "$id": "https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/StateMessage/schema.json",
   "type": "object",
   "properties": {
-    "type": { "$ref": "https://fiware.github.io/data-models/specs/Robot/schema.json#/definitions/type" },
+    "type": { "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json#/definitions/type" },
     "time": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/schema.json#/definitions/time",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json#/definitions/time",
       "description": "Send time"
     },
     "mode": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/mode",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/mode",
       "description": "Status of the robot"
     },
     "errors": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/errors",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/errors",
       "description": "Error messages"
     },
     "pose": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/pose",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/pose",
       "description": "Current position"
     },
     "destination": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/destination",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/destination",
       "description": "Current destination"
     },
     "accuracy": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/accuracy",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/accuracy",
       "description": "Position accuracy of the robot"
     },
     "battery": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/battery",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/battery",
       "description": "Battery states"
     }
   },

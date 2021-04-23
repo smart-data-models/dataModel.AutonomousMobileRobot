@@ -3,26 +3,26 @@
   "$id": "https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/EmergencyCommand/ReturnMessage/schema.json",
   "type": "object",
   "properties": {
-    "type": { "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/type" },
+    "type": { "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/type" },
     "time": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/time",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/time",
       "description": "Send time"
     },
     "receivedTime": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/time",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/time",
       "description": "Received time"
     },
     "receivedStopCommand": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/stopCommand",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/stopCommand",
       "description": "Received stop command"
     },
     "result": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/resultsOfStopCommand",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/resultsOfStopCommand",
       "description": "Reaction of the stop command"
     },
 
     "errors": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/errors",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/errors",
       "description": "Error messages"
     }
   },

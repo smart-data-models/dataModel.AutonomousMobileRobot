@@ -3,33 +3,33 @@
   "$id": "https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/Command/ReturnMessage/schema.json",
   "type": "object",
   "properties": {
-    "type": { "$ref": "https://fiware.github.io/data-models/specs/Robot/schema.json#/definitions/type" },
+    "type": { "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json#/definitions/type" },
     "time": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/schema.json#/definitions/time",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json#/definitions/time",
       "description": "Send time"
     },
     "receivedTime": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/time",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/time",
       "description": "Received time"
     },
     "receivedCommand": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/command",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/command",
       "description": "Received command"
     },
     "receivedWaypoints": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/waypoints",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/waypoints",
       "description": "Received list of waypoints"
     },
     "receivedDestination": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/destination",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/destination",
       "description": "Received destination"
     },
     "result": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/results",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/results",
       "description": "Reaction of the command"
     },
     "errors": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/errors",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/errors",
       "description": "Error messages"
     }
   },

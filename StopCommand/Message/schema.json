@@ -3,13 +3,13 @@
   "$id": "https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/EmergencyCommand/Message/schema.json",
   "type": "object",
   "properties": {
-    "type": { "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/type" },
+    "type": { "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/type" },
     "time": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/time",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/time",
       "description": "Send time"
     },
     "stopCommand": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/stopCommand"
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/stopCommand"
     }
   },
   "required": ["id", "type", "time", "stopCommand"],
