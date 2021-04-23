@@ -3,12 +3,19 @@
   "$id": "https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/EmergencyCommand/Message/schema.json",
   "type": "object",
   "properties": {
-    "type": { "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/type" },
+    "type": {
+      "type": "object",
+      "description": "Relationship. NGSI Entity type. It has to be AutonomousMobileRobot",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json#/definitions/type"
+    },
     "time": {
-      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/time",
-      "description": "Send time"
+      "type": "object",
+      "description": "Relationship. The time when the command was sent.",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json#/definitions/time"
     },
     "stopCommand": {
+      "type": "object",
+      "description": "Relationship. The stop command to the robot.",
       "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/stopCommand"
     }
   },

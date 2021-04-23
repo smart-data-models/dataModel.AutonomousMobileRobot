@@ -3,34 +3,45 @@
   "$id": "https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/StateMessage/schema.json",
   "type": "object",
   "properties": {
-    "type": { "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json#/definitions/type" },
+    "type": {
+      "type": "object",
+      "description": "Relationship. NGSI Entity type. It has to be AutonomousMobileRobot",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json#/definitions/type"
+    },
     "time": {
-      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json#/definitions/time",
-      "description": "Send time"
+      "type": "object",
+      "description": "Relationship. The time when the return message was sent.",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json#/definitions/time"
     },
     "mode": {
-      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/mode",
-      "description": "Status of the robot"
+      "type": "object",
+      "description": "Relationship. The status of the robot.",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/mode"
     },
     "errors": {
-      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/errors",
-      "description": "Error messages"
+      "type": "object",
+      "description": "Relationship. Describes the errors that occurred in the robot.",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/errors"
     },
     "pose": {
-      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/pose",
-      "description": "Current position"
+      "type": "object",
+      "description": "Relationship. Current position of the robot.",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/pose"
     },
     "destination": {
-      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/destination",
-      "description": "Current destination"
+      "type": "object",
+      "description": "Relationship. Current destination of the robot. Basically, it is the same as one of the waypoints.",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/destination"
     },
     "accuracy": {
-      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/accuracy",
-      "description": "Position accuracy of the robot"
+      "type": "object",
+      "description": "Relationship. Position accuracy of the robot.",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/accuracy"
     },
     "battery": {
-      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/battery",
-      "description": "Battery states"
+      "type": "object",
+      "description": "Relationship. The states of the battery the robot mounted.",
+      "$ref": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/schema.json/schema.json#/definitions/battery"
     }
   },
   "required": [
