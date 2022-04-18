@@ -1,10 +1,18 @@
 description: This is a compilation list of the current adopters of the data model CommandReturnMessage of the Subject AutonomousMobileRobot.
 currentAdopters:
 -
- adopter:
- description:
- mail:
- organization:
- project:
+ adopter: Secure robotic systems 
+ description: Develop a cloud platform to manage Autunomous mobile robots
+ mail: service-robotics@ml.tis.co.jp
+ organization: TIS Inc.
+ project: https://github.com/RoboticBase/robot-security-2020-fukushima
  comments:
- startDate:
+ startDate: 2020-04-01
+-
+ adopter: Robot delivery in a suburban area
+ description: Delivery service using Autonomous mobile robot in a suburban area
+ mail: service-robotics@ml.tis.co.jp
+ organization: TIS Inc.
+ project: https://www.tis.co.jp/news/2021/tis_news/20210929_2.html 
+ comments: 
+ startDate: 2020-04-01
