@@ -1,0 +1,2 @@
+"id_", "type_", "commandTime_", "command_", "waypoints__0__point2D__x_", "waypoints__0__point2D__y_", "waypoints__1__point2D__x_", "waypoints__1__point2D__y_", "waypoints__2__point2D__x_", "waypoints__2__point2D__y_", "waypoints__2__orientation2D__theta_"
+"Robot:Mega_rover:01", "CommandMessage", "2019-06-07T08:39:40.064+09:00", "navi", "0.503", "0.0", "3.411", "0.0", "3.411", "2.81", "0.0"
