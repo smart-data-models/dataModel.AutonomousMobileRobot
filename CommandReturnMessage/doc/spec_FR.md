@@ -4,11 +4,11 @@
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.AutonomousMobileRobot/blob/master/CommandReturnMessage/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Message de retour de commande**  
-version : 0.0.1  
+version : 0.1.0  
 
 ## Liste des propriétés  
 
-- `commandTime`: Temps envoyé au robot  - `errors`: Décrit les erreurs qui se sont produites dans le robot.  - `receivedCommand`: La commande que le robot a reçue  - `receivedTime`: Temps de réception de la commande au robot  - `receivedWaypoints`: Les points de passage que le robot a reçus.  - `result`: Enum : 'ack, error, ignore'. Le résultat de la réception de la commande par le robot.  - `type`: Type d'entité NGSI. Il doit être CommandMessageReturn.    
+- `commandTime`: Temps envoyé au robot  - `errors`: Décrit les erreurs qui se sont produites dans le robot.  - `receivedCommand`: La commande que le robot a reçue  - `receivedTime`: Temps de réception de la commande au robot  - `receivedWaypoints`: Les points de passage que le robot a reçus.  - `result`: Enum : 'ack, error, ignore'. Le résultat de la réception de la commande par le robot.  - `type`: Type d'entité NGSI. Il doit s'agir de CommandReturnMessage.    
 Propriétés requises  
 - `commandTime`  - `errors`  - `id`  - `receivedCommand`  - `receivedTime`  - `receivedWaypoints`  - `result`  - `type`  ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
@@ -162,9 +162,9 @@ CommandReturnMessage:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be CommandMessageReturn'    
+      description: 'NGSI Entity type. It has to be CommandReturnMessage'    
       enum:    
-        - CommandMessageReturn    
+        - CommandReturnMessage    
       type: string    
       x-ngsi:    
         type: Property    
@@ -183,7 +183,7 @@ CommandReturnMessage:
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/CommandReturnMessage/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/CommandReturnMessage/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.1.0    
 ```  
 </details>    
 ## Exemples de charges utiles  
