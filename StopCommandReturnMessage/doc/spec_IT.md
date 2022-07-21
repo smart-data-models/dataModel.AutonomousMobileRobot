@@ -8,9 +8,9 @@
 
 ## Elenco delle proprietà  
 
-- `commandTime`: Inviato il tempo al robot  - `errors`: Descrive gli errori che si sono verificati nel robot.  - `receivedStopCommand`: Il comando di arresto ricevuto dal robot.  - `receivedTime`: Tempo di ricezione del comando al robot  - `resultsOfStopCommand`: Enum:'ack, error'. Il risultato del robot ha ricevuto il comando di arresto.  - `type`: Tipo di entità NGSI. Deve essere StopCommandReturnMessage    
+- `commandTime`: Tempo inviato al robot  - `errors`: Descrive gli errori verificatisi nel robot.  - `receivedStopCommand`: Il comando di arresto ricevuto dal robot.  - `receivedTime`: Tempo di ricezione del comando al robot  - `resultsOfStopCommand`: Enum:'ack, error'. Il risultato della ricezione del comando di arresto da parte del robot.  - `type`: Tipo di entità NGSI. Deve essere StopCommandReturnMessage    
 Proprietà richieste  
-- `commandTime`  - `errors`  - `id`  - `receivedStopCommand`  - `receivedTime`  - `result`  - `type`  ## Descrizione del modello di dati delle proprietà  
+- `commandTime`  - `errors`  - `id`  - `receivedStopCommand`  - `receivedTime`  - `result`  - `type`  ## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -75,7 +75,7 @@ StopCommandReturnMessage:
   x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
+## Esempi di payload  
 #### StopCommandReturnMessage Valori chiave NGSI-v2 Esempio  
 Ecco un esempio di StopCommandReturnMessage in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
@@ -89,8 +89,8 @@ StopCommandReturnMessage:
   "errors": []  
 }  
 ```  
-#### StopCommandReturnMessage NGSI-v2 normalizzato Esempio  
-Ecco un esempio di StopCommandReturnMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+#### StopCommandReturnMessage Esempio normalizzato NGSI-v2  
+Ecco un esempio di StopCommandReturnMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Robot:Mega_rover:01",  
@@ -133,8 +133,8 @@ StopCommandReturnMessage:
   ]  
 }  
 ```  
-#### StopCommandReturnMessage NGSI-LD normalizzato Esempio  
-Ecco un esempio di StopCommandReturnMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+#### StopCommandReturnMessage Esempio normalizzato NGSI-LD  
+Ecco un esempio di StopCommandReturnMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",  
@@ -170,4 +170,4 @@ StopCommandReturnMessage:
   ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
