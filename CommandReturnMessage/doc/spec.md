@@ -4,11 +4,11 @@
 [Open License](https://github.com/smart-data-models//dataModel.AutonomousMobileRobot/blob/master/CommandReturnMessage/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **Command return message**  
-version: 0.0.1  
+version: 0.1.0  
 
 ## List of properties  
 
-- `commandTime`: Sent time to the robot  - `errors`: Describes the errors that occurred in the robot.  - `receivedCommand`: The command which the robot received  - `receivedTime`: Command received time to the robot  - `receivedWaypoints`: The waypoints which the robot received.  - `result`: Enum:'ack, error, ignore'. The result of the robot received the command.  - `type`: NGSI Entity type. It has to be CommandMessageReturn    
+- `commandTime`: Sent time to the robot  - `errors`: Describes the errors that occurred in the robot.  - `receivedCommand`: The command which the robot received  - `receivedTime`: Command received time to the robot  - `receivedWaypoints`: The waypoints which the robot received.  - `result`: Enum:'ack, error, ignore'. The result of the robot received the command.  - `type`: NGSI Entity type. It has to be CommandReturnMessage    
 Required properties  
 - `commandTime`  - `errors`  - `id`  - `receivedCommand`  - `receivedTime`  - `receivedWaypoints`  - `result`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -162,9 +162,9 @@ CommandReturnMessage:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be CommandMessageReturn'    
+      description: 'NGSI Entity type. It has to be CommandReturnMessage'    
       enum:    
-        - CommandMessageReturn    
+        - CommandReturnMessage    
       type: string    
       x-ngsi:    
         type: Property    
@@ -183,7 +183,7 @@ CommandReturnMessage:
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/CommandReturnMessage/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/CommandReturnMessage/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.1.0    
 ```  
 </details>    
 ## Example payloads    
