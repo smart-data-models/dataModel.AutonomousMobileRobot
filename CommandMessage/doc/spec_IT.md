@@ -8,9 +8,9 @@
 
 ## Elenco delle proprietà  
 
-- `command`: Comando inviato al robot  - `commandTime`: Inviato il tempo al robot  - `type`: Tipo di entità NGSI. Deve essere CommandMessage  - `waypoints`: Elenco dei waypoint.    
+- `command`: Comando inviato al robot  - `commandTime`: Tempo inviato al robot  - `type`: Tipo di entità NGSI. Deve essere CommandMessage  - `waypoints`: Elenco dei waypoint.    
 Proprietà richieste  
-- `command`  - `commandTime`  - `id`  - `type`  - `waypoints`  ## Descrizione del modello di dati delle proprietà  
+- `command`  - `commandTime`  - `id`  - `type`  - `waypoints`  ## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -161,9 +161,9 @@ CommandMessage:
   x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### CommandMessage Valori chiave NGSI-v2 Esempio  
-Ecco un esempio di un CommandMessage in formato JSON-LD come key-values. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+## Esempi di payload  
+#### ComandoMessaggio Valori chiave NGSI-v2 Esempio  
+Ecco un esempio di CommandMessage in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Robot:Mega_rover:01",  
@@ -195,8 +195,8 @@ CommandMessage:
   ]  
 }  
 ```  
-#### CommandMessage NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un CommandMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+#### ComandoMessaggio NGSI-v2 normalizzato Esempio  
+Ecco un esempio di CommandMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Robot:Mega_rover:01",  
@@ -237,8 +237,8 @@ CommandMessage:
   }  
 }  
 ```  
-#### CommandMessage Valori chiave NGSI-LD Esempio  
-Ecco un esempio di un CommandMessage in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+#### ComandoMessaggio Valori chiave NGSI-LD Esempio  
+Ecco un esempio di CommandMessage in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",  
@@ -273,8 +273,8 @@ CommandMessage:
   ]  
 }  
 ```  
-#### CommandMessage NGSI-LD normalizzato Esempio  
-Ecco un esempio di un CommandMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+#### ComandoMessaggio NGSI-LD normalizzato Esempio  
+Ecco un esempio di CommandMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",  
@@ -321,4 +321,4 @@ CommandMessage:
   ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
