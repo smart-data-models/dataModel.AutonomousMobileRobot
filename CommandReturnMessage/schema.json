@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0.1",
+  "$schemaVersion": "0.1.0",
   "$id": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/CommandReturnMessage/schema.json",
   "description": "Command return message",
   "modelTags": "",
@@ -8,9 +8,9 @@
   "properties": {
     "type": {
       "type": "string",
-      "description": "Property. NGSI Entity type. It has to be CommandMessageReturn",
+      "description": "Property. NGSI Entity type. It has to be CommandReturnMessage",
       "enum": [
-        "CommandMessageReturn"
+        "CommandReturnMessage"
       ]
     },
     "commandTime":{
