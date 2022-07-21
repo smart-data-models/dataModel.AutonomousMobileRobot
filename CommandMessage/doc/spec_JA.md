@@ -8,7 +8,7 @@
 
 ## プロパティ一覧  
 
-- `command`: ロボットへのコマンド送信  - `commandTime`: ロボットへの送信時間  - `type`: NGSI エンティティタイプ。CommandMessageである必要があります。  - `waypoints`: ウェイポイントの一覧です。    
+- `command`: ロボットへのコマンド送信  - `commandTime`: ロボットへの送信時間  - `type`: NGSI Entity タイプ。CommandMessageである必要があります。  - `waypoints`: ウェイポイントの一覧です。    
 必要なプロパティ  
 - `command`  - `commandTime`  - `id`  - `type`  - `waypoints`  ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
@@ -163,7 +163,7 @@ CommandMessage:
 </details>    
 ## ペイロードの例  
 #### CommandMessage NGSI-v2 key-value 例  
-以下は、CommandMessageをJSON-LD形式でkey-valueにした例である。これは、`options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返す。  
+以下は、CommandMessageをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返す。  
 ```json  
 {  
   "id": "Robot:Mega_rover:01",  
@@ -196,7 +196,7 @@ CommandMessage:
 }  
 ```  
 #### CommandMessage NGSI-v2 正規化例  
-以下は、CommandMessageをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、CommandMessage を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "Robot:Mega_rover:01",  
@@ -238,7 +238,7 @@ CommandMessage:
 }  
 ```  
 #### CommandMessage NGSI-LD key-value 例  
-CommandMessageをJSON-LD形式でkey-valueとした例です。これは、`options=keyValues`を使った場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返される。  
+ここでは、CommandMessageをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使った場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",  
@@ -274,7 +274,7 @@ CommandMessage:
 }  
 ```  
 #### CommandMessage NGSI-LD 正規化例  
-以下は、CommandMessageをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、CommandMessage を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 ```json  
 {  
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",  
