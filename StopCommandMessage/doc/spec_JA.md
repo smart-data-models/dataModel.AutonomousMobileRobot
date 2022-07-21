@@ -52,8 +52,8 @@ StopCommandMessage:
 ```  
 </details>    
 ## ペイロードの例  
-#### StopCommandMessage NGSI-v2 key-value 例  
-以下は、StopCommandMessageをJSON-LD形式でkey-valueとして記述した例です。これは、`options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### StopCommandMessage NGSI-v2 key-value の例  
+以下は、StopCommandMessage を JSON-LD フォーマットで key-value にした例です。これは、`options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "Robot:Mega_rover:01",  
@@ -63,7 +63,7 @@ StopCommandMessage:
 }  
 ```  
 #### StopCommandMessage NGSI-v2 正規化例  
-以下は、StopCommandMessageをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、StopCommandMessage を正規化した JSON-LD 形式の例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "Robot:Mega_rover:01",  
@@ -78,8 +78,8 @@ StopCommandMessage:
   }  
 }  
 ```  
-#### StopCommandMessage NGSI-LD key-value 例  
-以下は、StopCommandMessageをJSON-LD形式でkey-valueとして記述した例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### StopCommandMessage NGSI-LD key-value の例  
+以下は、StopCommandMessageをJSON-LD形式でkey-valuesとして記述した例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",  
@@ -92,7 +92,7 @@ StopCommandMessage:
 }  
 ```  
 #### StopCommandMessage NGSI-LD 正規化例  
-以下は、StopCommandMessageをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、StopCommandMessage を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",  
