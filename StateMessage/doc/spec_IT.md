@@ -8,9 +8,9 @@
 
 ## Elenco delle proprietà  
 
-- `accuracy`: Precisione della posizione del robot.  - `battery`: Gli stati della batteria che il robot ha montato.  - `commandTime`: Inviato il tempo al robot  - `destination`: Destinazione attuale del robot. Fondamentalmente, è la stessa di uno dei waypoint  - `errors`: Descrive gli errori che si sono verificati nel robot.  - `mode`: Enum:'error, navi, standby'. Stato di navigazione del robot.  - `pose`: Posizione attuale del robot.  - `type`: Tipo di entità NGSI. Deve essere StateMessage    
+- `accuracy`: Precisione della posizione del robot.  - `battery`: Gli stati della batteria montata dal robot.  - `commandTime`: Tempo inviato al robot  - `destination`: Destinazione attuale del robot. In pratica, è la stessa di uno dei waypoint  - `errors`: Descrive gli errori verificatisi nel robot.  - `mode`: Enum:'error, navi, standby'. Stato di navigazione del robot.  - `pose`: Posizione attuale del robot.  - `type`: Tipo di entità NGSI. Deve essere StateMessage    
 Proprietà richieste  
-- `accuracy`  - `battery`  - `commandTime`  - `destination`  - `errors`  - `id`  - `mode`  - `pose`  - `type`  ## Descrizione del modello di dati delle proprietà  
+- `accuracy`  - `battery`  - `commandTime`  - `destination`  - `errors`  - `id`  - `mode`  - `pose`  - `type`  ## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -254,9 +254,9 @@ StateMessage:
   x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### StateMessage Valori chiave NGSI-v2 Esempio  
-Ecco un esempio di uno StateMessage in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+## Esempi di payload  
+#### StatoMessaggio Valori chiave NGSI-v2 Esempio  
+Ecco un esempio di StateMessage in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Robot:Mega_rover:01",  
@@ -328,8 +328,8 @@ StateMessage:
   }  
 }  
 ```  
-#### StateMessage NGSI-v2 normalizzato Esempio  
-Ecco un esempio di uno StateMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+#### StatoMessaggio NGSI-v2 normalizzato Esempio  
+Ecco un esempio di StateMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si usano le opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Robot:Mega_rover:01",  
@@ -422,8 +422,8 @@ StateMessage:
   }  
 }  
 ```  
-#### StateMessage Valori chiave NGSI-LD Esempio  
-Ecco un esempio di uno StateMessage in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+#### StatoMessaggio Valori chiave NGSI-LD Esempio  
+Ecco un esempio di StateMessage in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",  
@@ -498,8 +498,8 @@ StateMessage:
   ]  
 }  
 ```  
-#### StateMessage NGSI-LD normalizzato Esempio  
-Ecco un esempio di uno StateMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa le opzioni e restituisce i dati di contesto di una singola entità.  
+#### StatoMessaggio NGSI-LD normalizzato Esempio  
+Ecco un esempio di StateMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano le opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",  
@@ -598,4 +598,4 @@ StateMessage:
   ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
