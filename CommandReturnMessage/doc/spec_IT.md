@@ -4,13 +4,13 @@
 [Licenza aperta](https://github.com/smart-data-models//dataModel.AutonomousMobileRobot/blob/master/CommandReturnMessage/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descrizione globale: **Messaggio di ritorno del comando**  
-versione: 0.0.1  
+versione: 0.1.0  
 
 ## Elenco delle proprietà  
 
-- `commandTime`: Inviato il tempo al robot  - `errors`: Descrive gli errori che si sono verificati nel robot.  - `receivedCommand`: Il comando che il robot ha ricevuto  - `receivedTime`: Tempo di ricezione del comando al robot  - `receivedWaypoints`: I waypoint che il robot ha ricevuto.  - `result`: Enum:'ack, error, ignore'. Il risultato del robot ha ricevuto il comando.  - `type`: Tipo di entità NGSI. Deve essere CommandMessageReturn    
+- `commandTime`: Tempo inviato al robot  - `errors`: Descrive gli errori verificatisi nel robot.  - `receivedCommand`: Il comando ricevuto dal robot  - `receivedTime`: Tempo di ricezione del comando al robot  - `receivedWaypoints`: I waypoint ricevuti dal robot.  - `result`: Enum:'ack, error, ignore'. Il risultato della ricezione del comando da parte del robot.  - `type`: Tipo di entità NGSI. Deve essere CommandReturnMessage (Messaggio di ritorno del comando).    
 Proprietà richieste  
-- `commandTime`  - `errors`  - `id`  - `receivedCommand`  - `receivedTime`  - `receivedWaypoints`  - `result`  - `type`  ## Descrizione del modello di dati delle proprietà  
+- `commandTime`  - `errors`  - `id`  - `receivedCommand`  - `receivedTime`  - `receivedWaypoints`  - `result`  - `type`  ## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -162,9 +162,9 @@ CommandReturnMessage:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be CommandMessageReturn'    
+      description: 'NGSI Entity type. It has to be CommandReturnMessage'    
       enum:    
-        - CommandMessageReturn    
+        - CommandReturnMessage    
       type: string    
       x-ngsi:    
         type: Property    
@@ -183,12 +183,12 @@ CommandReturnMessage:
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/CommandReturnMessage/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/CommandReturnMessage/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.1.0    
 ```  
 </details>    
-## Esempio di payloads  
+## Esempi di payload  
 #### CommandReturnMessage Valori chiave NGSI-v2 Esempio  
-Ecco un esempio di un CommandReturnMessage in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di CommandReturnMessage in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Robot:Mega_rover:01",  
@@ -223,8 +223,8 @@ CommandReturnMessage:
   "errors": [""]  
 }  
 ```  
-#### CommandReturnMessage NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un CommandReturnMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+#### CommandReturnMessage Esempio normalizzato NGSI-v2  
+Ecco un esempio di CommandReturnMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Robot:Mega_rover:01",  
@@ -280,7 +280,7 @@ CommandReturnMessage:
 }  
 ```  
 #### CommandReturnMessage Valori chiave NGSI-LD Esempio  
-Ecco un esempio di un CommandReturnMessage in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di CommandReturnMessage in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",  
@@ -321,7 +321,7 @@ CommandReturnMessage:
 }  
 ```  
 #### CommandReturnMessage NGSI-LD normalizzato Esempio  
-Ecco un esempio di un CommandReturnMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di CommandReturnMessage in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",  
@@ -385,4 +385,4 @@ CommandReturnMessage:
   ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
