@@ -8,7 +8,7 @@
 
 ## プロパティ一覧  
 
-- `accuracy`: ロボットの位置精度。  - `battery`: ロボットが搭載している電池の状態。  - `commandTime`: ロボットへの送信時間  - `destination`: ロボットの現在の目的地。基本的にはウェイポイントの1つと同じ。  - `errors`: ロボットで発生したエラーについて説明します。  - `mode`: Enum:'error, navi, standby'.ロボットの航行状態。  - `pose`: ロボットの現在位置。  - `type`: NGSI エンティティタイプ。StateMessageである必要があります。    
+- `accuracy`: ロボットの位置精度。  - `battery`: ロボットが搭載している電池の状態。  - `commandTime`: ロボットへの送信時間  - `destination`: ロボットの現在の目的地。基本的にはウェイポイントの1つと同じ。  - `errors`: ロボットで発生したエラーについて説明します。  - `mode`: Enum:'error, navi, standby'.ロボットの航行状態。  - `pose`: ロボットの現在位置。  - `type`: NGSI Entity タイプ。StateMessageである必要があります。    
 必要なプロパティ  
 - `accuracy`  - `battery`  - `commandTime`  - `destination`  - `errors`  - `id`  - `mode`  - `pose`  - `type`  ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
@@ -256,7 +256,7 @@ StateMessage:
 </details>    
 ## ペイロードの例  
 #### StateMessage NGSI-v2 key-value の例。  
-StateMessageをJSON-LD形式でkey-valueとした例です。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+以下は、StateMessageをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "Robot:Mega_rover:01",  
@@ -423,7 +423,7 @@ StateMessage:
 }  
 ```  
 #### StateMessage NGSI-LD key-value の例  
-StateMessageをJSON-LD形式でkey-valueとした例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+ここでは、StateMessageをJSON-LD形式でkey-valuesとした例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",  
