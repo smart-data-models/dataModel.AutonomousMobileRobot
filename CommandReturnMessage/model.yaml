@@ -146,9 +146,9 @@ CommandReturnMessage:
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI Entity type. It has to be CommandMessageReturn'
+      description: 'NGSI Entity type. It has to be CommandReturnMessage'
       enum:
-        - CommandMessageReturn
+        - CommandReturnMessage
       type: string
       x-ngsi:
         type: Property
@@ -167,4 +167,4 @@ CommandReturnMessage:
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/CommandReturnMessage/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/CommandReturnMessage/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.1.0
