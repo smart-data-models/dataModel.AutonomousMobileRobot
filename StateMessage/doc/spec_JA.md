@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティStateMessage  
-==================  
+==================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.AutonomousMobileRobot/blob/master/StateMessage/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述です。**状態メッセージ**。  
 バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `accuracy`: ロボットの位置精度。  - `battery`: ロボットが搭載している電池の状態。  - `commandTime`: ロボットへの送信時間  - `destination`: ロボットの現在の目的地。基本的にはウェイポイントの1つと同じ。  - `errors`: ロボットで発生したエラーについて説明します。  - `mode`: Enum:'error, navi, standby'.ロボットの航行状態。  - `pose`: ロボットの現在位置。  - `type`: NGSI Entity タイプ。StateMessageである必要があります。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `accuracy[object]`: ロボットの位置精度。  - `battery[object]`: ロボットが搭載している電池の状態。  - `commandTime[string]`: ロボットへの送信時間  - `destination[object]`: ロボットの現在の目的地。基本的にはウェイポイントの1つと同じ。  - `errors[array]`: ロボットで発生したエラーについて説明します。  - `mode[string]`: Enum:'error, navi, standby'.ロボットの航行状態。  - `pose[object]`: ロボットの現在位置。  - `type[string]`: NGSI Entity タイプ。StateMessageである必要があります。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `accuracy`  - `battery`  - `commandTime`  - `destination`  - `errors`  - `id`  - `mode`  - `pose`  - `type`  ## プロパティのデータモデル記述  
+- `accuracy`  - `battery`  - `commandTime`  - `destination`  - `errors`  - `id`  - `mode`  - `pose`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 StateMessage:    
@@ -254,9 +268,14 @@ StateMessage:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### StateMessage NGSI-v2 key-value の例。  
 以下は、StateMessageをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Robot:Mega_rover:01",  
@@ -328,8 +347,10 @@ StateMessage:
   }  
 }  
 ```  
+</details>  
 #### StateMessage NGSI-v2 正規化例  
 以下は、StateMessageをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Robot:Mega_rover:01",  
@@ -422,8 +443,10 @@ StateMessage:
   }  
 }  
 ```  
+</details>  
 #### StateMessage NGSI-LD key-value の例  
 ここでは、StateMessageをJSON-LD形式でkey-valuesとした例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",  
@@ -498,8 +521,10 @@ StateMessage:
   ]  
 }  
 ```  
+</details>  
 #### StateMessage NGSI-LD 正規化例  
 以下は、StateMessageをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",  
@@ -598,4 +623,12 @@ StateMessage:
   ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
