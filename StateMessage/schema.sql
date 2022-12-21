@@ -1,0 +1,3 @@
+/* (Beta) Export of data model StateMessage of the subject dataModel.AutonomousMobileRobot for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE mode_type AS ENUM ('error', 'navi', 'standby');CREATE TYPE StateMessage_type AS ENUM ('StateMessage');
+CREATE TABLE StateMessage (accuracy json, battery json, commandTime timestamp, destination json, errors json, mode mode_type, pose json, type StateMessage_type);
