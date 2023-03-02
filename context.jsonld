@@ -1,5 +1,10 @@
 {
     "@context": {
+        "CommandMessage": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/CommandMessage",
+        "CommandReturnMessage": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/CommandReturnMessage",
+        "StateMessage": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/StateMessage",
+        "StopCommandMessage": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/StopCommandMessage",
+        "StopCommandReturnMessage": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/StopCommandReturnMessage",
         "accuracy": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/accuracy",
         "battery": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/battery",
         "command": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/command",
