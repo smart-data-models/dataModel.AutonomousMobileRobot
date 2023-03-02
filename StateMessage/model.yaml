@@ -1,12 +1,12 @@
 StateMessage:
-  description: 'State message'
+  description: State message
   properties:
     accuracy:
       additionalProperties: false
-      description: 'Position accuracy of the robot.'
+      description: Position accuracy of the robot.
       properties:
         covariance:
-          description: 'Property. Error covariance matrix of estimated position'
+          description: Property. Error covariance matrix of estimated position
           items:
             type: number
           type: array
@@ -15,7 +15,7 @@ StateMessage:
         type: Property
     battery:
       additionalProperties: false
-      description: 'The states of the battery the robot mounted.'
+      description: The states of the battery the robot mounted.
       oneOf:
         - required:
             - voltage
@@ -28,7 +28,7 @@ StateMessage:
           description: 'Property. Current of the mobile element. Units:''Ampere''. Model: ''https:/schema.org/Number'''
           type: number
         remainingPercentage:
-          description: 'Property. Remaining battery charge'
+          description: Property. Remaining battery charge
           maximum: 100
           minimum: 0
           type: number
@@ -43,7 +43,7 @@ StateMessage:
       x-ngsi:
         type: Property
     commandTime:
-      description: 'Sent time to the robot'
+      description: Sent time to the robot
       format: date-time
       type: string
       x-ngsi:
@@ -55,23 +55,23 @@ StateMessage:
       properties:
         geographicPoint:
           additionalProperties: true
-          description: 'Property. Point in geographic coordinates'
+          description: Property. Point in geographic coordinates
           properties: &statemessage_-_properties_-_pose_-_properties_-_geographicpoint_-_properties
             altitude:
               default: 0.0
-              description: 'Property. Simple coordinate of a point'
+              description: Property. Simple coordinate of a point
               type: number
             latitude:
               allOf:
                 - default: 0.0
-                  description: 'Property. Simple coordinate of a point'
+                  description: Property. Simple coordinate of a point
                   type: number
                 - maximum: 90
                   minimum: -90
             longitude:
               allOf:
                 - default: 0.0
-                  description: 'Property. Simple coordinate of a point'
+                  description: Property. Simple coordinate of a point
                   type: number
                 - maximum: 180
                   minimum: -180
@@ -81,34 +81,34 @@ StateMessage:
             - altitude
           type: object
         mapId:
-          description: 'Property. Map ID'
+          description: Property. Map ID
           type: string
         orientation2D:
           additionalProperties: true
-          description: 'Property. 2D Angle of an element'
+          description: Property. 2D Angle of an element
           properties: &statemessage_-_properties_-_pose_-_properties_-_orientation2d_-_properties
             theta:
               default: 0.0
-              description: 'Property. Simple measurement of an angle'
+              description: Property. Simple measurement of an angle
               type: number
           required: &statemessage_-_properties_-_pose_-_properties_-_orientation2d_-_required
             - theta
           type: object
         orientation3D:
           additionalProperties: true
-          description: 'Property. 3D Angles of an element'
+          description: Property. 3D Angles of an element
           properties: &statemessage_-_properties_-_pose_-_properties_-_orientation3d_-_properties
             pitch:
               default: 0.0
-              description: 'Property. Simple measurement of an angle'
+              description: Property. Simple measurement of an angle
               type: number
             roll:
               default: 0.0
-              description: 'Property. Simple measurement of an angle'
+              description: Property. Simple measurement of an angle
               type: number
             yaw:
               default: 0.0
-              description: 'Property. Simple measurement of an angle'
+              description: Property. Simple measurement of an angle
               type: number
           required: &statemessage_-_properties_-_pose_-_properties_-_orientation3d_-_required
             - roll
@@ -117,15 +117,15 @@ StateMessage:
           type: object
         point2D:
           additionalProperties: true
-          description: 'Property. Point in 2D as a two simple coordinates x and y'
+          description: Property. Point in 2D as a two simple coordinates x and y
           properties: &statemessage_-_properties_-_pose_-_properties_-_point2d_-_properties
             x:
               default: 0.0
-              description: 'Property. Simple coordinate of a point'
+              description: Property. Simple coordinate of a point
               type: number
             y:
               default: 0.0
-              description: 'Property. Simple coordinate of a point'
+              description: Property. Simple coordinate of a point
               type: number
           required: &statemessage_-_properties_-_pose_-_properties_-_point2d_-_required
             - x
@@ -137,15 +137,15 @@ StateMessage:
           properties: &statemessage_-_properties_-_pose_-_properties_-_point3d_-_properties
             x:
               default: 0.0
-              description: 'Property. Simple coordinate of a point'
+              description: Property. Simple coordinate of a point
               type: number
             y:
               default: 0.0
-              description: 'Property. Simple coordinate of a point'
+              description: Property. Simple coordinate of a point
               type: number
             z:
               default: 0.0
-              description: 'Property. Simple coordinate of a point'
+              description: Property. Simple coordinate of a point
               type: number
           required: &statemessage_-_properties_-_pose_-_properties_-_point3d_-_required
             - x
@@ -156,7 +156,7 @@ StateMessage:
       x-ngsi:
         type: Property
     errors:
-      description: 'Describes the errors that occurred in the robot.'
+      description: Describes the errors that occurred in the robot.
       items:
         type: string
       type: array
@@ -173,33 +173,33 @@ StateMessage:
         type: Property
     pose:
       additionalProperties: false
-      description: 'Current position of the robot.'
+      description: Current position of the robot.
       maxProperties: 3
       properties:
         geographicPoint:
           additionalProperties: true
-          description: 'Property. Point in geographic coordinates'
+          description: Property. Point in geographic coordinates
           properties: *statemessage_-_properties_-_pose_-_properties_-_geographicpoint_-_properties
           required: *statemessage_-_properties_-_pose_-_properties_-_geographicpoint_-_required
           type: object
         mapId:
-          description: 'Property. Map ID'
+          description: Property. Map ID
           type: string
         orientation2D:
           additionalProperties: true
-          description: 'Property. 2D Angle of an element'
+          description: Property. 2D Angle of an element
           properties: *statemessage_-_properties_-_pose_-_properties_-_orientation2d_-_properties
           required: *statemessage_-_properties_-_pose_-_properties_-_orientation2d_-_required
           type: object
         orientation3D:
           additionalProperties: true
-          description: 'Property. 3D Angles of an element'
+          description: Property. 3D Angles of an element
           properties: *statemessage_-_properties_-_pose_-_properties_-_orientation3d_-_properties
           required: *statemessage_-_properties_-_pose_-_properties_-_orientation3d_-_required
           type: object
         point2D:
           additionalProperties: true
-          description: 'Property. Point in 2D as a two simple coordinates x and y'
+          description: Property. Point in 2D as a two simple coordinates x and y
           properties: *statemessage_-_properties_-_pose_-_properties_-_point2d_-_properties
           required: *statemessage_-_properties_-_pose_-_properties_-_point2d_-_required
           type: object
@@ -213,7 +213,7 @@ StateMessage:
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI Entity type. It has to be StateMessage'
+      description: NGSI Entity type. It has to be StateMessage
       enum:
         - StateMessage
       type: string
@@ -231,7 +231,7 @@ StateMessage:
     - type
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/StateMessage/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/StateMessage/schema.json
   x-model-tags: ""
