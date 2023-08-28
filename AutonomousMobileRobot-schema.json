@@ -8,7 +8,7 @@
   "definitions": {
     "accuracy": {
       "type": "object",
-      "description": "Property. Position accuracy of the robot.",
+      "description": "Property. Position accuracy of the robot",
       "properties": {
         "covariance": {
           "$ref": "#/definitions/covariance"
@@ -23,7 +23,7 @@
     },
     "battery": {
       "type": "object",
-      "description": "Property. The states of the battery the robot mounted.",
+      "description": "Property. The states of the battery the robot mounted",
       "properties": {
         "voltage": {
           "$ref": "#/definitions/voltage"
@@ -110,7 +110,7 @@
     },
     "errors": {
       "type": "array",
-      "description": "Property. Describes the errors that occurred in the robot.",
+      "description": "Property. Describes the errors that occurred in the robot",
       "items": {
         "type": "string"
       }
@@ -158,7 +158,7 @@
     },
     "mode": {
       "type": "string",
-      "description": "Property. Enum:'error, navi, standby'. Navigational status of the robot.",
+      "description": "Property. Enum:'error, navi, standby'. Navigational status of the robot",
       "enum": [
         "error",
         "navi",
@@ -270,7 +270,7 @@
     },
     "receivedWaypoints": {
       "type": "array",
-      "description": "Property. The waypoints which the robot received.",
+      "description": "Property. The waypoints which the robot received",
       "items": {
         "type": "object",
         "properties": {
@@ -312,7 +312,7 @@
     },
     "resultsOfStopCommand": {
       "type": "string",
-      "description": "Property. Enum:'ack, error'. The result of the robot received the stop command.",
+      "description": "Property. Enum:'ack, error'. The result of the robot received the stop command",
       "enum": [
         "ack",
         "error"
@@ -320,7 +320,7 @@
     },
     "result": {
       "type": "string",
-      "description": "Property. Enum:'ack, error, ignore'. The result of the robot received the command.",
+      "description": "Property. Enum:'ack, error, ignore'. The result of the robot received the command",
       "enum": [
         "ack",
         "ignore",
@@ -333,7 +333,7 @@
     },
     "stopCommand": {
       "type": "string",
-      "description": "Property. Enum:'stop'. The stop command to the robot.",
+      "description": "Property. Enum:'stop'. The stop command to the robot",
       "enum": [
         "stop"
       ]
@@ -344,7 +344,7 @@
   },
     "waypoints": {
       "type": "array",
-      "description": "Property. List of waypoints.",
+      "description": "Property. List of waypoints",
       "items": {
         "type": "object",
         "properties": {
