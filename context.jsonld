@@ -5,23 +5,6 @@
         "StateMessage": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/StateMessage",
         "StopCommandMessage": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/StopCommandMessage",
         "StopCommandReturnMessage": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/StopCommandReturnMessage",
-        "accuracy": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/accuracy",
-        "battery": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/battery",
-        "command": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/command",
-        "commandTime": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/commandTime",
-        "destination": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/destination",
-        "errors": "ngsi-ld:errors",
-        "mode": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/mode",
-        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
-        "pose": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/pose",
-        "receivedCommand": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/receivedCommand",
-        "receivedStopCommand": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/receivedStopCommand",
-        "receivedTime": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/receivedTime",
-        "receivedWaypoints": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/receivedWaypoints",
-        "result": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/result",
-        "resultsOfStopCommand": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/resultsOfStopCommand",
-        "stopCommand": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/stopCommand",
-        "type": "@type",
-        "waypoints": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/waypoints"
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/"
     }
 }
