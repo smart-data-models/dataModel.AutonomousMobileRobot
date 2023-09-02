@@ -96,7 +96,7 @@ StateMessage:
                     type: Property
                 - maximum: 180
                   minimum: -180
-          required: &statemessage_-_properties_-_pose_-_properties_-_geographicpoint_-_required
+          required:
             - latitude
             - longitude
             - altitude
@@ -118,7 +118,7 @@ StateMessage:
               type: number
               x-ngsi:
                 type: Property
-          required: &statemessage_-_properties_-_pose_-_properties_-_orientation2d_-_required
+          required:
             - theta
           type: object
           x-ngsi:
@@ -145,7 +145,7 @@ StateMessage:
               type: number
               x-ngsi:
                 type: Property
-          required: &statemessage_-_properties_-_pose_-_properties_-_orientation3d_-_required
+          required:
             - roll
             - pitch
             - yaw
@@ -168,7 +168,7 @@ StateMessage:
               type: number
               x-ngsi:
                 type: Property
-          required: &statemessage_-_properties_-_pose_-_properties_-_point2d_-_required
+          required:
             - x
             - y
           type: object
@@ -196,7 +196,7 @@ StateMessage:
               type: number
               x-ngsi:
                 type: Property
-          required: &statemessage_-_properties_-_pose_-_properties_-_point3d_-_required
+          required:
             - x
             - y
             - z
@@ -255,7 +255,10 @@ StateMessage:
                     type: Property
                 - maximum: 180
                   minimum: -180
-          required: *statemessage_-_properties_-_pose_-_properties_-_geographicpoint_-_required
+          required:
+            - latitude
+            - longitude
+            - altitude
           type: object
           x-ngsi:
             type: Property
@@ -274,7 +277,8 @@ StateMessage:
               type: number
               x-ngsi:
                 type: Property
-          required: *statemessage_-_properties_-_pose_-_properties_-_orientation2d_-_required
+          required:
+            - theta
           type: object
           x-ngsi:
             type: Property
@@ -300,7 +304,10 @@ StateMessage:
               type: number
               x-ngsi:
                 type: Property
-          required: *statemessage_-_properties_-_pose_-_properties_-_orientation3d_-_required
+          required:
+            - roll
+            - pitch
+            - yaw
           type: object
           x-ngsi:
             type: Property
@@ -320,7 +327,9 @@ StateMessage:
               type: number
               x-ngsi:
                 type: Property
-          required: *statemessage_-_properties_-_pose_-_properties_-_point2d_-_required
+          required:
+            - x
+            - y
           type: object
           x-ngsi:
             type: Property
@@ -346,7 +355,10 @@ StateMessage:
               type: number
               x-ngsi:
                 type: Property
-          required: *statemessage_-_properties_-_pose_-_properties_-_point3d_-_required
+          required:
+            - x
+            - y
+            - z
           type: object
           x-ngsi:
             type: Property
