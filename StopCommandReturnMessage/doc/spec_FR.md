@@ -14,51 +14,51 @@
 
 ## Liste des propriétés  
 
-<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
-- `commandTime[string]`: Temps envoyé au robot  - `errors[array]`: Décrit les erreurs qui se sont produites dans le robot.  - `receivedStopCommand[string]`: La commande d'arrêt que le robot a reçue.  - `receivedTime[string]`: Temps de réception de la commande au robot  - `resultsOfStopCommand[string]`: Enum : 'ack, error'. Le résultat de la réception par le robot de la commande d'arrêt.  - `type[string]`: Type d'entité NGSI. Il doit être StopCommandReturnMessage.  <!-- /30-PropertiesList -->  
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il peut avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `commandTime[date-time]`: Envoi de l'heure au robot  - `errors[array]`: Décrit les erreurs survenues dans le robot.  - `receivedStopCommand[string]`: La commande d'arrêt que le robot a reçue.  - `receivedTime[date-time]`: Temps de réception de la commande par le robot  - `resultsOfStopCommand[string]`: Enum : "ack, error". Le résultat de la réception par le robot de la commande d'arrêt  - `type[string]`: Type d'entité NGSI. Il doit s'agir de StopCommandReturnMessage  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
 - `commandTime`  - `errors`  - `id`  - `receivedStopCommand`  - `receivedTime`  - `result`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Description des propriétés du modèle de données  
+## Modèle de données description des propriétés  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 StopCommandReturnMessage:    
-  description: 'Stop Command Return Message'    
+  description: Stop Command Return Message    
   properties:    
     commandTime:    
-      description: 'Sent time to the robot'    
+      description: Sent time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     errors:    
-      description: 'Describes the errors that occurred in the robot.'    
+      description: Describes the errors that occurred in the robot    
       items:    
         type: string    
       type: array    
       x-ngsi:    
         type: Property    
     receivedStopCommand:    
-      description: 'The stop command which the robot received.'    
+      description: The stop command which the robot received.    
       enum:    
         - stop    
       type: string    
       x-ngsi:    
         type: Property    
     receivedTime:    
-      description: 'Command received time to the robot'    
+      description: Command received time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     resultsOfStopCommand:    
-      description: 'Enum:''ack, error''. The result of the robot received the stop command.'    
+      description: 'Enum:''ack, error''. The result of the robot received the stop command'    
       enum:    
         - ack    
         - error    
@@ -66,7 +66,7 @@ StopCommandReturnMessage:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be StopCommandReturnMessage'    
+      description: NGSI Entity type. It has to be StopCommandReturnMessage    
       enum:    
         - StopCommandReturnMessage    
       type: string    
@@ -82,7 +82,7 @@ StopCommandReturnMessage:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/StopCommandReturnMessage/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/StopCommandReturnMessage/schema.json    
   x-model-tags: ""    
@@ -94,8 +94,8 @@ StopCommandReturnMessage:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## Exemples de charges utiles  
-#### StopCommandReturnMessage Valeurs-clés NGSI-v2 Exemple  
-Voici un exemple de StopCommandReturnMessage au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### StopCommandReturnMessage Valeurs clés de l'INSIG-v2 Exemple  
+Voici un exemple de StopCommandReturnMessage au format JSON-LD sous forme de valeurs clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -109,8 +109,8 @@ StopCommandReturnMessage:
 }  
 ```  
 </details>  
-#### StopCommandReturnMessage Exemple normalisé NGSI-v2  
-Voici un exemple de StopCommandReturnMessage au format JSON-LD tel que normalisé. Il est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+#### StopCommandReturnMessage NGSI-v2 normalisé Exemple  
+Voici un exemple de StopCommandReturnMessage au format JSON-LD tel que normalisé. Il est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -139,8 +139,8 @@ StopCommandReturnMessage:
 }  
 ```  
 </details>  
-#### StopCommandReturnMessage Valeurs-clés NGSI-LD Exemple  
-Voici un exemple de StopCommandReturnMessage au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### StopCommandReturnMessage Valeurs clés NGSI-LD Exemple  
+Voici un exemple de StopCommandReturnMessage au format JSON-LD sous forme de valeurs clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -157,7 +157,7 @@ StopCommandReturnMessage:
 }  
 ```  
 </details>  
-#### StopCommandReturnMessage Exemple normalisé NGSI-LD  
+#### StopCommandReturnMessage NGSI-LD normalisé Exemple  
 Voici un exemple de StopCommandReturnMessage au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
@@ -199,7 +199,7 @@ StopCommandReturnMessage:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+Voir [FAQ 10] (https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse à la question de savoir comment traiter les unités de magnitude.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
