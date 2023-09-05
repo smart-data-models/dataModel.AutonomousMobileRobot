@@ -14,8 +14,8 @@
 
 ## Liste der Eigenschaften  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
-- `commandTime[string]`: Gesendete Zeit an den Roboter  - `errors[array]`: Beschreibt die Fehler, die beim Roboter aufgetreten sind.  - `receivedStopCommand[string]`: Der Stoppbefehl, den der Roboter erhalten hat.  - `receivedTime[string]`: Empfangszeit des Befehls an den Roboter  - `resultsOfStopCommand[string]`: Enum:'ack, error'. Das Ergebnis, wenn der Roboter den Stopp-Befehl erhalten hat.  - `type[string]`: NGSI-Entitätstyp. Es muss StopCommandReturnMessage sein  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `commandTime[date-time]`: Gesendete Zeit an den Roboter  - `errors[array]`: Beschreibt die Fehler, die beim Roboter aufgetreten sind  - `receivedStopCommand[string]`: Der Stoppbefehl, den der Roboter erhalten hat.  - `receivedTime[date-time]`: Empfangszeit des Befehls an den Roboter  - `resultsOfStopCommand[string]`: Enum:'ack, error'. Das Ergebnis, wenn der Roboter den Stoppbefehl erhalten hat  - `type[string]`: NGSI-Entitätstyp. Es muss StopCommandReturnMessage sein  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `commandTime`  - `errors`  - `id`  - `receivedStopCommand`  - `receivedTime`  - `result`  - `type`  <!-- /35-RequiredProperties -->  
@@ -29,36 +29,36 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 StopCommandReturnMessage:    
-  description: 'Stop Command Return Message'    
+  description: Stop Command Return Message    
   properties:    
     commandTime:    
-      description: 'Sent time to the robot'    
+      description: Sent time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     errors:    
-      description: 'Describes the errors that occurred in the robot.'    
+      description: Describes the errors that occurred in the robot    
       items:    
         type: string    
       type: array    
       x-ngsi:    
         type: Property    
     receivedStopCommand:    
-      description: 'The stop command which the robot received.'    
+      description: The stop command which the robot received.    
       enum:    
         - stop    
       type: string    
       x-ngsi:    
         type: Property    
     receivedTime:    
-      description: 'Command received time to the robot'    
+      description: Command received time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     resultsOfStopCommand:    
-      description: 'Enum:''ack, error''. The result of the robot received the stop command.'    
+      description: 'Enum:''ack, error''. The result of the robot received the stop command'    
       enum:    
         - ack    
         - error    
@@ -66,7 +66,7 @@ StopCommandReturnMessage:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be StopCommandReturnMessage'    
+      description: NGSI Entity type. It has to be StopCommandReturnMessage    
       enum:    
         - StopCommandReturnMessage    
       type: string    
@@ -82,7 +82,7 @@ StopCommandReturnMessage:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/StopCommandReturnMessage/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/StopCommandReturnMessage/schema.json    
   x-model-tags: ""    
