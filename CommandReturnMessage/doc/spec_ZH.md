@@ -1,85 +1,91 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-实体。命令返回信息（CommandReturnMessage  
-==============================<!-- /10-Header -->  
+实体：命令返回信息  
+=========<!-- /10-Header -->  
 <!-- 15-License -->  
 [开放许可](https://github.com/smart-data-models//dataModel.AutonomousMobileRobot/blob/master/CommandReturnMessage/LICENSE.md)  
 [文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-全局描述。**命令返回信息**  
-版本：0.1.0  
+全局描述：**命令返回信息**  
+版本： 0.1.0  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-##属性列表  
+## 属性列表  
 
-<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
-- `commandTime[string]`: 发送给机器人的时间  - `errors[array]`: 描述机器人中发生的错误。  - `receivedCommand[string]`: 机器人收到的指令  - `receivedTime[string]`: 机器人收到指令的时间  - `receivedWaypoints[array]`: 机器人收到的航点。  - `result[string]`: Enum:'ack, error, ignore'。机器人收到命令的结果。  - `type[string]`: NGSI实体类型。它必须是CommandReturnMessage。  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果属性中没有类型，是因为它可能有多个类型或不同的格式/模式</sub></sup>。  
+- `commandTime[date-time]`: 向机器人发送时间  - `errors[array]`: 描述机器人发生的错误  - `receivedCommand[string]`: 机器人接收到的指令  - `receivedTime[date-time]`: 接收到机器人指令的时间  - `receivedWaypoints[array]`: 机器人接收到的航点  - `result[string]`: 枚举："接受、错误、忽略"。机器人接收命令的结果  - `type[string]`: NGSI 实体类型。必须是 CommandReturnMessage  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `commandTime`  - `errors`  - `id`  - `receivedCommand`  - `receivedTime`  - `receivedWaypoints`  - `result`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## 数据模型的属性描述  
-按字母顺序排列（点击查看详情）。  
+## 属性的数据模型描述  
+按字母顺序排列（点击查看详情）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CommandReturnMessage:    
-  description: 'Command return message'    
+  description: Command return message    
   properties:    
     commandTime:    
-      description: 'Sent time to the robot'    
+      description: Sent time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     errors:    
-      description: 'Describes the errors that occurred in the robot.'    
+      description: Describes the errors that occurred in the robot    
       items:    
         type: string    
       type: array    
       x-ngsi:    
         type: Property    
     receivedCommand:    
-      description: 'The command which the robot received'    
+      description: The command which the robot received    
       type: string    
       x-ngsi:    
         type: Property    
     receivedTime:    
-      description: 'Command received time to the robot'    
+      description: Command received time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     receivedWaypoints:    
-      description: 'The waypoints which the robot received.'    
+      description: The waypoints which the robot received    
       items:    
         additionalProperties: false    
         properties:    
           geographicPoint:    
             additionalProperties: true    
-            description: 'Property. Point in geographic coordinates'    
+            description: Point in geographic coordinates    
             properties:    
               altitude:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               latitude:    
                 allOf:    
                   - default: 0.0    
-                    description: 'Property. Simple coordinate of a point'    
+                    description: Simple coordinate of a point    
                     type: number    
+                    x-ngsi:    
+                      type: Property    
                   - maximum: 90    
                     minimum: -90    
               longitude:    
                 allOf:    
                   - default: 0.0    
-                    description: 'Property. Simple coordinate of a point'    
+                    description: Simple coordinate of a point    
                     type: number    
+                    x-ngsi:    
+                      type: Property    
                   - maximum: 180    
                     minimum: -180    
             required:    
@@ -87,87 +93,119 @@ CommandReturnMessage:
               - longitude    
               - altitude    
             type: object    
+            x-ngsi:    
+              type: Property    
           mapId:    
-            description: 'Property. Map ID'    
+            description: Map ID    
             type: string    
+            x-ngsi:    
+              type: Property    
           orientation2D:    
             additionalProperties: true    
-            description: 'Property. 2D Angle of an element'    
+            description: 2D Angle of an element    
             properties:    
               theta:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - theta    
             type: object    
+            x-ngsi:    
+              type: Property    
           orientation3D:    
             additionalProperties: true    
-            description: 'Property. 3D Angles of an element'    
+            description: 3D Angles of an element    
             properties:    
               pitch:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               roll:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               yaw:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - roll    
               - pitch    
               - yaw    
             type: object    
+            x-ngsi:    
+              type: Property    
           point2D:    
             additionalProperties: true    
-            description: 'Property. Point in 2D as a two simple coordinates x and y'    
+            description: Point in 2D as a two simple coordinates x and y    
             properties:    
               x:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               y:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - x    
               - y    
             type: object    
+            x-ngsi:    
+              type: Property    
           point3D:    
             additionalProperties: true    
-            description: 'Property. Point in 3D as a three simple coordinates x, y and z'    
+            description: 'Point in 3D as a three simple coordinates x, y and z'    
             properties:    
               x:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               y:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               z:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - x    
               - y    
               - z    
             type: object    
+            x-ngsi:    
+              type: Property    
           speed:    
-            description: 'Property. Robot speed between coordinates of waypoints[m/s]'    
+            description: 'Robot speed between coordinates of waypoints[m/s]'    
             type: number    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
         type: Property    
     result:    
-      description: 'Enum:''ack, error, ignore''. The result of the robot received the command.'    
+      description: 'Enum:''ack, error, ignore''. The result of the robot received the command'    
       enum:    
         - ack    
         - ignore    
@@ -176,7 +214,7 @@ CommandReturnMessage:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be CommandReturnMessage'    
+      description: NGSI Entity type. It has to be CommandReturnMessage    
       enum:    
         - CommandReturnMessage    
       type: string    
@@ -193,7 +231,7 @@ CommandReturnMessage:
     - errors    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/CommandReturnMessage/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/CommandReturnMessage/schema.json    
   x-model-tags: ""    
@@ -204,9 +242,9 @@ CommandReturnMessage:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## ＃＃＃＃有效载荷的例子  
-#### CommandReturnMessage NGSI-v2 key-values 示例  
-下面是一个以JSON-LD格式作为key-values的CommandReturnMessage的例子。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+## 有效载荷示例  
+#### CommandReturnMessage NGSI-v2 键值示例  
+下面是一个以 JSON-LD 格式作为键值的 CommandReturnMessage 示例。当使用 `options=keyValues` 时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -243,8 +281,8 @@ CommandReturnMessage:
 }  
 ```  
 </details>  
-#### CommandReturnMessage NGSI-v2规范化示例  
-下面是一个以JSON-LD格式规范化的CommandReturnMessage的例子。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+#### 命令返回信息 NGSI-v2 标准化示例  
+下面是一个以 JSON-LD 格式规范化的命令返回信息（CommandReturnMessage）示例。当不使用选项时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -301,8 +339,8 @@ CommandReturnMessage:
 }  
 ```  
 </details>  
-#### CommandReturnMessage NGSI-LD key-values 示例  
-这里是一个以JSON-LD格式作为key-values的CommandReturnMessage的例子。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### CommandReturnMessage NGSI-LD 键值示例  
+下面是一个以 JSON-LD 格式作为键值的 CommandReturnMessage 示例。当使用 `options=keyValues` 时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -344,8 +382,8 @@ CommandReturnMessage:
 }  
 ```  
 </details>  
-#### CommandReturnMessage NGSI-LD规范化示例  
-下面是一个以JSON-LD格式规范化的CommandReturnMessage的例子。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### 命令返回信息 NGSI-LD 正常化示例  
+下面是一个规范化 JSON-LD 格式的 CommandReturnMessage 示例。当不使用选项时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -414,7 +452,7 @@ CommandReturnMessage:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
+请参阅 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)，获取如何处理幅度单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
