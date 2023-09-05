@@ -3,77 +3,83 @@
 エンティティコマンドメッセージ  
 ===============<!-- /10-Header -->  
 <!-- 15-License -->  
-[オープンライセンス](https://github.com/smart-data-models//dataModel.AutonomousMobileRobot/blob/master/CommandMessage/LICENSE.md)  
-[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[オープン・ライセンス](https://github.com/smart-data-models//dataModel.AutonomousMobileRobot/blob/master/CommandMessage/LICENSE.md)  
+[文書は自動的に生成される](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-グローバルな記述です。**コマンドメッセージ  
+グローバルな説明**コマンドメッセージ  
 バージョン: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## プロパティ一覧  
+## プロパティのリスト  
 
-<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `command[string]`: ロボットへのコマンド送信  - `commandTime[string]`: ロボットへの送信時間  - `type[string]`: NGSI Entity タイプ。CommandMessageである必要があります。  - `waypoints[array]`: ウェイポイントの一覧です。  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
+- `command[string]`: ロボットに送られるコマンド  - `commandTime[date-time]`: ロボットに時間を送信  - `type[string]`: NGSI エンティティタイプ。CommandMessageでなければならない。  - `waypoints[array]`: ウェイポイント一覧  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-必要なプロパティ  
+必須プロパティ  
 - `command`  - `commandTime`  - `id`  - `type`  - `waypoints`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
-アルファベット順に並びます（クリックで詳細へ）  
+アルファベット順（クリックで詳細表示）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CommandMessage:    
-  description: 'Command message'    
+  description: Command message    
   properties:    
     command:    
-      description: 'Command sent to the robot'    
+      description: Command sent to the robot    
       type: string    
       x-ngsi:    
         type: Property    
     commandTime:    
-      description: 'Sent time to the robot'    
+      description: Sent time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be CommandMessage'    
+      description: NGSI Entity type. It has to be CommandMessage    
       enum:    
         - CommandMessage    
       type: string    
       x-ngsi:    
         type: Property    
     waypoints:    
-      description: 'List of waypoints.'    
+      description: List of waypoints    
       items:    
         additionalProperties: false    
         properties:    
           geographicPoint:    
             additionalProperties: true    
-            description: 'Property. Point in geographic coordinates'    
+            description: Point in geographic coordinates    
             properties:    
               altitude:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               latitude:    
                 allOf:    
                   - default: 0.0    
-                    description: 'Property. Simple coordinate of a point'    
+                    description: Simple coordinate of a point    
                     type: number    
+                    x-ngsi:    
+                      type: Property    
                   - maximum: 90    
                     minimum: -90    
               longitude:    
                 allOf:    
                   - default: 0.0    
-                    description: 'Property. Simple coordinate of a point'    
+                    description: Simple coordinate of a point    
                     type: number    
+                    x-ngsi:    
+                      type: Property    
                   - maximum: 180    
                     minimum: -180    
             required:    
@@ -81,81 +87,113 @@ CommandMessage:
               - longitude    
               - altitude    
             type: object    
+            x-ngsi:    
+              type: Property    
           mapId:    
-            description: 'Property. Map ID'    
+            description: Map ID    
             type: string    
+            x-ngsi:    
+              type: Property    
           orientation2D:    
             additionalProperties: true    
-            description: 'Property. 2D Angle of an element'    
+            description: 2D Angle of an element    
             properties:    
               theta:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - theta    
             type: object    
+            x-ngsi:    
+              type: Property    
           orientation3D:    
             additionalProperties: true    
-            description: 'Property. 3D Angles of an element'    
+            description: 3D Angles of an element    
             properties:    
               pitch:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               roll:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               yaw:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - roll    
               - pitch    
               - yaw    
             type: object    
+            x-ngsi:    
+              type: Property    
           point2D:    
             additionalProperties: true    
-            description: 'Property. Point in 2D as a two simple coordinates x and y'    
+            description: Point in 2D as a two simple coordinates x and y    
             properties:    
               x:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               y:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - x    
               - y    
             type: object    
+            x-ngsi:    
+              type: Property    
           point3D:    
             additionalProperties: true    
-            description: 'Property. Point in 3D as a three simple coordinates x, y and z'    
+            description: 'Point in 3D as a three simple coordinates x, y and z'    
             properties:    
               x:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               y:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               z:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - x    
               - y    
               - z    
             type: object    
+            x-ngsi:    
+              type: Property    
           speed:    
-            description: 'Property. Robot speed between coordinates of waypoints[m/s]'    
+            description: 'Robot speed between coordinates of waypoints[m/s]'    
             type: number    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
@@ -168,7 +206,7 @@ CommandMessage:
     - waypoints    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/CommandMessage/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/CommandMessage/schema.json    
   x-model-tags: ""    
@@ -180,8 +218,8 @@ CommandMessage:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## ペイロードの例  
-#### CommandMessage NGSI-v2 key-value 例  
-以下は、CommandMessageをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返す。  
+#### コマンドメッセージ NGSI-v2 キー値の例  
+JSON-LD形式のCommandMessageのkey-valuesの例である。これはNGSI-v2と互換性があり、`options=keyValues`を使用すると、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -215,8 +253,8 @@ CommandMessage:
 }  
 ```  
 </details>  
-#### CommandMessage NGSI-v2 正規化例  
-以下は、CommandMessage を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### コマンドメッセージ NGSI-v2 正規化例  
+以下は、正規化されたJSON-LD形式のCommandMessageの例である。これはNGSI-v2と互換性があり、オプションを使用しない場合、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -259,8 +297,8 @@ CommandMessage:
 }  
 ```  
 </details>  
-#### CommandMessage NGSI-LD key-value 例  
-ここでは、CommandMessageをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使った場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返される。  
+#### コマンドメッセージ NGSI-LD キー値の例  
+JSON-LD形式のCommandMessageのkey-valuesの例である。options=keyValues`を使うとNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -297,8 +335,8 @@ CommandMessage:
 }  
 ```  
 </details>  
-#### CommandMessage NGSI-LD 正規化例  
-以下は、CommandMessage を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
+#### コマンドメッセージ NGSI-LD 正規化例  
+以下は、正規化されたJSON-LD形式のCommandMessageの例である。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -350,7 +388,7 @@ CommandMessage:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+マグニチュード単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照のこと。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
