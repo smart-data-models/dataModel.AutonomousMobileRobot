@@ -15,7 +15,7 @@
 ## List of properties  
 
 <sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `commandTime[string]`: Sent time to the robot  - `stopCommand[string]`: Enum:'stop'. The stop command to the robot.  - `type[string]`: NGSI Entity type. It has to be StopCommandMessage  <!-- /30-PropertiesList -->  
+- `commandTime[date-time]`: Sent time to the robot  - `stopCommand[string]`: Enum:'stop'. The stop command to the robot  - `type[string]`: NGSI Entity type. It has to be StopCommandMessage  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `commandTime`  - `id`  - `stopCommand`  - `type`  <!-- /35-RequiredProperties -->  
@@ -29,23 +29,23 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 StopCommandMessage:    
-  description: 'Stop Command message'    
+  description: Stop Command message    
   properties:    
     commandTime:    
-      description: 'Sent time to the robot'    
+      description: Sent time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     stopCommand:    
-      description: 'Enum:''stop''. The stop command to the robot.'    
+      description: 'Enum:''stop''. The stop command to the robot'    
       enum:    
         - stop    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be StopCommandMessage'    
+      description: NGSI Entity type. It has to be StopCommandMessage    
       enum:    
         - StopCommandMessage    
       type: string    
@@ -58,7 +58,7 @@ StopCommandMessage:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/StopCommandMessage/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/StopCommandMessage/schema.json    
   x-model-tags: ""    
