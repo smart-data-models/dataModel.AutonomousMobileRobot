@@ -14,66 +14,72 @@
 
 ## Liste des propriétés  
 
-<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
-- `command[string]`: Commande envoyée au robot  - `commandTime[string]`: Temps envoyé au robot  - `type[string]`: Type d'entité NGSI. Il doit s'agir de CommandMessage  - `waypoints[array]`: Liste des waypoints.  <!-- /30-PropertiesList -->  
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il peut avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `command[string]`: Commande envoyée au robot  - `commandTime[date-time]`: Envoi de l'heure au robot  - `type[string]`: Type d'entité NGSI. Il doit s'agir de CommandMessage  - `waypoints[array]`: Liste des points de passage  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
 - `command`  - `commandTime`  - `id`  - `type`  - `waypoints`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Description des propriétés du modèle de données  
+## Modèle de données description des propriétés  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CommandMessage:    
-  description: 'Command message'    
+  description: Command message    
   properties:    
     command:    
-      description: 'Command sent to the robot'    
+      description: Command sent to the robot    
       type: string    
       x-ngsi:    
         type: Property    
     commandTime:    
-      description: 'Sent time to the robot'    
+      description: Sent time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be CommandMessage'    
+      description: NGSI Entity type. It has to be CommandMessage    
       enum:    
         - CommandMessage    
       type: string    
       x-ngsi:    
         type: Property    
     waypoints:    
-      description: 'List of waypoints.'    
+      description: List of waypoints    
       items:    
         additionalProperties: false    
         properties:    
           geographicPoint:    
             additionalProperties: true    
-            description: 'Property. Point in geographic coordinates'    
+            description: Point in geographic coordinates    
             properties:    
               altitude:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               latitude:    
                 allOf:    
                   - default: 0.0    
-                    description: 'Property. Simple coordinate of a point'    
+                    description: Simple coordinate of a point    
                     type: number    
+                    x-ngsi:    
+                      type: Property    
                   - maximum: 90    
                     minimum: -90    
               longitude:    
                 allOf:    
                   - default: 0.0    
-                    description: 'Property. Simple coordinate of a point'    
+                    description: Simple coordinate of a point    
                     type: number    
+                    x-ngsi:    
+                      type: Property    
                   - maximum: 180    
                     minimum: -180    
             required:    
@@ -81,81 +87,113 @@ CommandMessage:
               - longitude    
               - altitude    
             type: object    
+            x-ngsi:    
+              type: Property    
           mapId:    
-            description: 'Property. Map ID'    
+            description: Map ID    
             type: string    
+            x-ngsi:    
+              type: Property    
           orientation2D:    
             additionalProperties: true    
-            description: 'Property. 2D Angle of an element'    
+            description: 2D Angle of an element    
             properties:    
               theta:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - theta    
             type: object    
+            x-ngsi:    
+              type: Property    
           orientation3D:    
             additionalProperties: true    
-            description: 'Property. 3D Angles of an element'    
+            description: 3D Angles of an element    
             properties:    
               pitch:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               roll:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               yaw:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - roll    
               - pitch    
               - yaw    
             type: object    
+            x-ngsi:    
+              type: Property    
           point2D:    
             additionalProperties: true    
-            description: 'Property. Point in 2D as a two simple coordinates x and y'    
+            description: Point in 2D as a two simple coordinates x and y    
             properties:    
               x:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               y:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - x    
               - y    
             type: object    
+            x-ngsi:    
+              type: Property    
           point3D:    
             additionalProperties: true    
-            description: 'Property. Point in 3D as a three simple coordinates x, y and z'    
+            description: 'Point in 3D as a three simple coordinates x, y and z'    
             properties:    
               x:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               y:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               z:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - x    
               - y    
               - z    
             type: object    
+            x-ngsi:    
+              type: Property    
           speed:    
-            description: 'Property. Robot speed between coordinates of waypoints[m/s]'    
+            description: 'Robot speed between coordinates of waypoints[m/s]'    
             type: number    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
@@ -168,7 +206,7 @@ CommandMessage:
     - waypoints    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/CommandMessage/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/CommandMessage/schema.json    
   x-model-tags: ""    
@@ -180,8 +218,8 @@ CommandMessage:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## Exemples de charges utiles  
-#### CommandMessage Valeurs-clés NGSI-v2 Exemple  
-Voici un exemple de CommandMessage au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### CommandMessage Valeurs clés NGSI-v2 Exemple  
+Voici un exemple de message de commande au format JSON-LD en tant que valeurs clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -216,7 +254,7 @@ CommandMessage:
 ```  
 </details>  
 #### CommandMessage NGSI-v2 normalisé Exemple  
-Voici un exemple de CommandMessage au format JSON-LD tel que normalisé. Il est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple de message de commande au format JSON-LD tel qu'il a été normalisé. Ce format est compatible avec la norme NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -259,8 +297,8 @@ CommandMessage:
 }  
 ```  
 </details>  
-#### CommandMessage Valeurs-clés NGSI-LD Exemple  
-Voici un exemple de CommandMessage au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### CommandMessage Valeurs clés NGSI-LD Exemple  
+Voici un exemple de message de commande au format JSON-LD en tant que valeurs clés. Ce format est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -298,7 +336,7 @@ CommandMessage:
 ```  
 </details>  
 #### CommandMessage NGSI-LD normalisé Exemple  
-Voici un exemple de CommandMessage au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple de message de commande au format JSON-LD normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -350,7 +388,7 @@ CommandMessage:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+Voir [FAQ 10] (https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse à la question de savoir comment traiter les unités de magnitude.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
