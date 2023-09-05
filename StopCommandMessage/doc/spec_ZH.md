@@ -1,51 +1,51 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-实体。停止命令信息（StopCommandMessage  
-============================<!-- /10-Header -->  
+实体停止命令信息  
+========<!-- /10-Header -->  
 <!-- 15-License -->  
 [开放许可](https://github.com/smart-data-models//dataModel.AutonomousMobileRobot/blob/master/StopCommandMessage/LICENSE.md)  
 [文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-全局描述。**停止命令信息**  
-版本：0.0.1  
+全局描述**停止命令信息**  
+版本： 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-##属性列表  
+## 属性列表  
 
-<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
-- `commandTime[string]`: 发送给机器人的时间  - `stopCommand[string]`: Enum:'stop'.对机器人的停止命令。  - `type[string]`: NGSI实体类型。它必须是StopCommandMessage。  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果属性中没有类型，是因为它可能有多个类型或不同的格式/模式</sub></sup>。  
+- `commandTime[date-time]`: 向机器人发送时间  - `stopCommand[string]`: 枚举：'停止'。机器人的停止命令  - `type[string]`: NGSI 实体类型。必须是 StopCommandMessage  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `commandTime`  - `id`  - `stopCommand`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## 数据模型的属性描述  
-按字母顺序排列（点击查看详情）。  
+## 属性的数据模型描述  
+按字母顺序排列（点击查看详情）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 StopCommandMessage:    
-  description: 'Stop Command message'    
+  description: Stop Command message    
   properties:    
     commandTime:    
-      description: 'Sent time to the robot'    
+      description: Sent time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     stopCommand:    
-      description: 'Enum:''stop''. The stop command to the robot.'    
+      description: 'Enum:''stop''. The stop command to the robot'    
       enum:    
         - stop    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be StopCommandMessage'    
+      description: NGSI Entity type. It has to be StopCommandMessage    
       enum:    
         - StopCommandMessage    
       type: string    
@@ -58,7 +58,7 @@ StopCommandMessage:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/StopCommandMessage/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/StopCommandMessage/schema.json    
   x-model-tags: ""    
@@ -69,9 +69,9 @@ StopCommandMessage:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## ＃＃＃＃有效载荷的例子  
-#### StopCommandMessage NGSI-v2关键值示例  
-这里是一个StopCommandMessage的例子，以JSON-LD格式作为关键值。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+## 有效载荷示例  
+#### StopCommandMessage NGSI-v2 键值示例  
+下面是一个以 JSON-LD 格式作为键值的 StopCommandMessage 示例。当使用 `options=keyValues` 时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -82,8 +82,8 @@ StopCommandMessage:
 }  
 ```  
 </details>  
-#### StopCommandMessage NGSI-v2规范化示例  
-下面是一个以JSON-LD格式规范化的StopCommandMessage的例子。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+#### StopCommandMessage NGSI-v2 标准化示例  
+下面是一个以 JSON-LD 格式规范化的 StopCommandMessage 示例。当不使用选项时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -100,8 +100,8 @@ StopCommandMessage:
 }  
 ```  
 </details>  
-#### StopCommandMessage NGSI-LD关键值示例  
-这里是一个StopCommandMessage的例子，以JSON-LD格式作为key-values。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### StopCommandMessage NGSI-LD 键值示例  
+下面是一个以 JSON-LD 格式作为键值的 StopCommandMessage 示例。当使用 `options=keyValues` 时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -115,8 +115,8 @@ StopCommandMessage:
 }  
 ```  
 </details>  
-#### StopCommandMessage NGSI-LD规范化示例  
-下面是一个以JSON-LD格式规范化的StopCommandMessage的例子。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### StopCommandMessage NGSI-LD 标准化示例  
+下面是一个以 JSON-LD 格式规范化的 StopCommandMessage 示例。在不使用选项时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -142,7 +142,7 @@ StopCommandMessage:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
+请参阅 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)，获取如何处理幅度单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
