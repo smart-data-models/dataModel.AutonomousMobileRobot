@@ -14,8 +14,8 @@
 
 ## Liste der Eigenschaften  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
-- `commandTime[string]`: Gesendete Zeit an den Roboter  - `stopCommand[string]`: Enum:'stop'. Der Stopp-Befehl für den Roboter.  - `type[string]`: NGSI-Entitätstyp. Es muss StopCommandMessage sein  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `commandTime[date-time]`: Gesendete Zeit an den Roboter  - `stopCommand[string]`: Enum:'stop'. Der Stopp-Befehl für den Roboter  - `type[string]`: NGSI-Entitätstyp. Es muss StopCommandMessage sein  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `commandTime`  - `id`  - `stopCommand`  - `type`  <!-- /35-RequiredProperties -->  
@@ -29,23 +29,23 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 StopCommandMessage:    
-  description: 'Stop Command message'    
+  description: Stop Command message    
   properties:    
     commandTime:    
-      description: 'Sent time to the robot'    
+      description: Sent time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     stopCommand:    
-      description: 'Enum:''stop''. The stop command to the robot.'    
+      description: 'Enum:''stop''. The stop command to the robot'    
       enum:    
         - stop    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be StopCommandMessage'    
+      description: NGSI Entity type. It has to be StopCommandMessage    
       enum:    
         - StopCommandMessage    
       type: string    
@@ -58,7 +58,7 @@ StopCommandMessage:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/StopCommandMessage/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/StopCommandMessage/schema.json    
   x-model-tags: ""    
