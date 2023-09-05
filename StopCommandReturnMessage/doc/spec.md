@@ -15,7 +15,7 @@
 ## List of properties  
 
 <sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `commandTime[string]`: Sent time to the robot  - `errors[array]`: Describes the errors that occurred in the robot.  - `receivedStopCommand[string]`: The stop command which the robot received.  - `receivedTime[string]`: Command received time to the robot  - `resultsOfStopCommand[string]`: Enum:'ack, error'. The result of the robot received the stop command.  - `type[string]`: NGSI Entity type. It has to be StopCommandReturnMessage  <!-- /30-PropertiesList -->  
+- `commandTime[date-time]`: Sent time to the robot  - `errors[array]`: Describes the errors that occurred in the robot  - `receivedStopCommand[string]`: The stop command which the robot received.  - `receivedTime[date-time]`: Command received time to the robot  - `resultsOfStopCommand[string]`: Enum:'ack, error'. The result of the robot received the stop command  - `type[string]`: NGSI Entity type. It has to be StopCommandReturnMessage  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `commandTime`  - `errors`  - `id`  - `receivedStopCommand`  - `receivedTime`  - `result`  - `type`  <!-- /35-RequiredProperties -->  
@@ -29,36 +29,36 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 StopCommandReturnMessage:    
-  description: 'Stop Command Return Message'    
+  description: Stop Command Return Message    
   properties:    
     commandTime:    
-      description: 'Sent time to the robot'    
+      description: Sent time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     errors:    
-      description: 'Describes the errors that occurred in the robot.'    
+      description: Describes the errors that occurred in the robot    
       items:    
         type: string    
       type: array    
       x-ngsi:    
         type: Property    
     receivedStopCommand:    
-      description: 'The stop command which the robot received.'    
+      description: The stop command which the robot received.    
       enum:    
         - stop    
       type: string    
       x-ngsi:    
         type: Property    
     receivedTime:    
-      description: 'Command received time to the robot'    
+      description: Command received time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     resultsOfStopCommand:    
-      description: 'Enum:''ack, error''. The result of the robot received the stop command.'    
+      description: 'Enum:''ack, error''. The result of the robot received the stop command'    
       enum:    
         - ack    
         - error    
@@ -66,7 +66,7 @@ StopCommandReturnMessage:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be StopCommandReturnMessage'    
+      description: NGSI Entity type. It has to be StopCommandReturnMessage    
       enum:    
         - StopCommandReturnMessage    
       type: string    
@@ -82,7 +82,7 @@ StopCommandReturnMessage:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/StopCommandReturnMessage/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/StopCommandReturnMessage/schema.json    
   x-model-tags: ""    
