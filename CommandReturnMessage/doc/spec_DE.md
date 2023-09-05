@@ -15,7 +15,7 @@
 ## Liste der Eigenschaften  
 
 <sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
-- `commandTime[string]`: Gesendete Zeit an den Roboter  - `errors[array]`: Beschreibt die Fehler, die beim Roboter aufgetreten sind.  - `receivedCommand[string]`: Der Befehl, den der Roboter erhalten hat  - `receivedTime[string]`: Empfangszeit des Befehls an den Roboter  - `receivedWaypoints[array]`: Die Wegpunkte, die der Roboter erhalten hat.  - `result[string]`: Enum:'ack, error, ignore'. Das Ergebnis, wenn der Roboter den Befehl erhalten hat.  - `type[string]`: NGSI-Entitätstyp. Es muss CommandReturnMessage sein  <!-- /30-PropertiesList -->  
+- `commandTime[date-time]`: Gesendete Zeit an den Roboter  - `errors[array]`: Beschreibt die Fehler, die beim Roboter aufgetreten sind  - `receivedCommand[string]`: Der Befehl, den der Roboter erhalten hat  - `receivedTime[date-time]`: Empfangszeit des Befehls an den Roboter  - `receivedWaypoints[array]`: Die Wegpunkte, die der Roboter erhalten hat  - `result[string]`: Enum:'ack, error, ignore'. Das Ergebnis, wenn der Roboter den Befehl erhalten hat  - `type[string]`: NGSI-Entitätstyp. Es muss CommandReturnMessage sein  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `commandTime`  - `errors`  - `id`  - `receivedCommand`  - `receivedTime`  - `receivedWaypoints`  - `result`  - `type`  <!-- /35-RequiredProperties -->  
@@ -29,57 +29,63 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CommandReturnMessage:    
-  description: 'Command return message'    
+  description: Command return message    
   properties:    
     commandTime:    
-      description: 'Sent time to the robot'    
+      description: Sent time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     errors:    
-      description: 'Describes the errors that occurred in the robot.'    
+      description: Describes the errors that occurred in the robot    
       items:    
         type: string    
       type: array    
       x-ngsi:    
         type: Property    
     receivedCommand:    
-      description: 'The command which the robot received'    
+      description: The command which the robot received    
       type: string    
       x-ngsi:    
         type: Property    
     receivedTime:    
-      description: 'Command received time to the robot'    
+      description: Command received time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     receivedWaypoints:    
-      description: 'The waypoints which the robot received.'    
+      description: The waypoints which the robot received    
       items:    
         additionalProperties: false    
         properties:    
           geographicPoint:    
             additionalProperties: true    
-            description: 'Property. Point in geographic coordinates'    
+            description: Point in geographic coordinates    
             properties:    
               altitude:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               latitude:    
                 allOf:    
                   - default: 0.0    
-                    description: 'Property. Simple coordinate of a point'    
+                    description: Simple coordinate of a point    
                     type: number    
+                    x-ngsi:    
+                      type: Property    
                   - maximum: 90    
                     minimum: -90    
               longitude:    
                 allOf:    
                   - default: 0.0    
-                    description: 'Property. Simple coordinate of a point'    
+                    description: Simple coordinate of a point    
                     type: number    
+                    x-ngsi:    
+                      type: Property    
                   - maximum: 180    
                     minimum: -180    
             required:    
@@ -87,87 +93,119 @@ CommandReturnMessage:
               - longitude    
               - altitude    
             type: object    
+            x-ngsi:    
+              type: Property    
           mapId:    
-            description: 'Property. Map ID'    
+            description: Map ID    
             type: string    
+            x-ngsi:    
+              type: Property    
           orientation2D:    
             additionalProperties: true    
-            description: 'Property. 2D Angle of an element'    
+            description: 2D Angle of an element    
             properties:    
               theta:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - theta    
             type: object    
+            x-ngsi:    
+              type: Property    
           orientation3D:    
             additionalProperties: true    
-            description: 'Property. 3D Angles of an element'    
+            description: 3D Angles of an element    
             properties:    
               pitch:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               roll:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               yaw:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - roll    
               - pitch    
               - yaw    
             type: object    
+            x-ngsi:    
+              type: Property    
           point2D:    
             additionalProperties: true    
-            description: 'Property. Point in 2D as a two simple coordinates x and y'    
+            description: Point in 2D as a two simple coordinates x and y    
             properties:    
               x:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               y:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - x    
               - y    
             type: object    
+            x-ngsi:    
+              type: Property    
           point3D:    
             additionalProperties: true    
-            description: 'Property. Point in 3D as a three simple coordinates x, y and z'    
+            description: 'Point in 3D as a three simple coordinates x, y and z'    
             properties:    
               x:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               y:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               z:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - x    
               - y    
               - z    
             type: object    
+            x-ngsi:    
+              type: Property    
           speed:    
-            description: 'Property. Robot speed between coordinates of waypoints[m/s]'    
+            description: 'Robot speed between coordinates of waypoints[m/s]'    
             type: number    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
         type: Property    
     result:    
-      description: 'Enum:''ack, error, ignore''. The result of the robot received the command.'    
+      description: 'Enum:''ack, error, ignore''. The result of the robot received the command'    
       enum:    
         - ack    
         - ignore    
@@ -176,7 +214,7 @@ CommandReturnMessage:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be CommandReturnMessage'    
+      description: NGSI Entity type. It has to be CommandReturnMessage    
       enum:    
         - CommandReturnMessage    
       type: string    
@@ -193,7 +231,7 @@ CommandReturnMessage:
     - errors    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/CommandReturnMessage/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/CommandReturnMessage/schema.json    
   x-model-tags: ""    
