@@ -14,72 +14,78 @@
 
 ## Lista de propiedades  
 
-<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
-- `commandTime[string]`: Tiempo de envío al robot  - `errors[array]`: Describe los errores ocurridos en el robot.  - `receivedCommand[string]`: La orden que recibió el robot  - `receivedTime[string]`: Tiempo de recepción de la orden al robot  - `receivedWaypoints[array]`: Los puntos de ruta que recibió el robot.  - `result[string]`: Enum:'ack, error, ignorar'. El resultado del robot recibió el comando.  - `type[string]`: Tipo de entidad NGSI. Tiene que ser CommandReturnMessage  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>.  
+- `commandTime[date-time]`: Hora de envío al robot  - `errors[array]`: Describe los errores que se han producido en el robot  - `receivedCommand[string]`: La orden que ha recibido el robot  - `receivedTime[date-time]`: Tiempo de recepción de la orden al robot  - `receivedWaypoints[array]`: Los waypoints que recibió el robot  - `result[string]`: Enum:'ack, error, ignorar'. El resultado del robot recibió el comando  - `type[string]`: Tipo de entidad NGSI. Tiene que ser CommandReturnMessage  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
 - `commandTime`  - `errors`  - `id`  - `receivedCommand`  - `receivedTime`  - `receivedWaypoints`  - `result`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Descripción del modelo de datos de las propiedades  
-Ordenados alfabéticamente (haga clic para ver los detalles)  
+## Descripción de las propiedades del modelo de datos  
+Ordenados alfabéticamente (pulse para más detalles)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CommandReturnMessage:    
-  description: 'Command return message'    
+  description: Command return message    
   properties:    
     commandTime:    
-      description: 'Sent time to the robot'    
+      description: Sent time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     errors:    
-      description: 'Describes the errors that occurred in the robot.'    
+      description: Describes the errors that occurred in the robot    
       items:    
         type: string    
       type: array    
       x-ngsi:    
         type: Property    
     receivedCommand:    
-      description: 'The command which the robot received'    
+      description: The command which the robot received    
       type: string    
       x-ngsi:    
         type: Property    
     receivedTime:    
-      description: 'Command received time to the robot'    
+      description: Command received time to the robot    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     receivedWaypoints:    
-      description: 'The waypoints which the robot received.'    
+      description: The waypoints which the robot received    
       items:    
         additionalProperties: false    
         properties:    
           geographicPoint:    
             additionalProperties: true    
-            description: 'Property. Point in geographic coordinates'    
+            description: Point in geographic coordinates    
             properties:    
               altitude:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               latitude:    
                 allOf:    
                   - default: 0.0    
-                    description: 'Property. Simple coordinate of a point'    
+                    description: Simple coordinate of a point    
                     type: number    
+                    x-ngsi:    
+                      type: Property    
                   - maximum: 90    
                     minimum: -90    
               longitude:    
                 allOf:    
                   - default: 0.0    
-                    description: 'Property. Simple coordinate of a point'    
+                    description: Simple coordinate of a point    
                     type: number    
+                    x-ngsi:    
+                      type: Property    
                   - maximum: 180    
                     minimum: -180    
             required:    
@@ -87,87 +93,119 @@ CommandReturnMessage:
               - longitude    
               - altitude    
             type: object    
+            x-ngsi:    
+              type: Property    
           mapId:    
-            description: 'Property. Map ID'    
+            description: Map ID    
             type: string    
+            x-ngsi:    
+              type: Property    
           orientation2D:    
             additionalProperties: true    
-            description: 'Property. 2D Angle of an element'    
+            description: 2D Angle of an element    
             properties:    
               theta:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - theta    
             type: object    
+            x-ngsi:    
+              type: Property    
           orientation3D:    
             additionalProperties: true    
-            description: 'Property. 3D Angles of an element'    
+            description: 3D Angles of an element    
             properties:    
               pitch:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               roll:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               yaw:    
                 default: 0.0    
-                description: 'Property. Simple measurement of an angle'    
+                description: Simple measurement of an angle    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - roll    
               - pitch    
               - yaw    
             type: object    
+            x-ngsi:    
+              type: Property    
           point2D:    
             additionalProperties: true    
-            description: 'Property. Point in 2D as a two simple coordinates x and y'    
+            description: Point in 2D as a two simple coordinates x and y    
             properties:    
               x:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               y:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - x    
               - y    
             type: object    
+            x-ngsi:    
+              type: Property    
           point3D:    
             additionalProperties: true    
-            description: 'Property. Point in 3D as a three simple coordinates x, y and z'    
+            description: 'Point in 3D as a three simple coordinates x, y and z'    
             properties:    
               x:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               y:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
               z:    
                 default: 0.0    
-                description: 'Property. Simple coordinate of a point'    
+                description: Simple coordinate of a point    
                 type: number    
+                x-ngsi:    
+                  type: Property    
             required:    
               - x    
               - y    
               - z    
             type: object    
+            x-ngsi:    
+              type: Property    
           speed:    
-            description: 'Property. Robot speed between coordinates of waypoints[m/s]'    
+            description: 'Robot speed between coordinates of waypoints[m/s]'    
             type: number    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
         type: Property    
     result:    
-      description: 'Enum:''ack, error, ignore''. The result of the robot received the command.'    
+      description: 'Enum:''ack, error, ignore''. The result of the robot received the command'    
       enum:    
         - ack    
         - ignore    
@@ -176,7 +214,7 @@ CommandReturnMessage:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be CommandReturnMessage'    
+      description: NGSI Entity type. It has to be CommandReturnMessage    
       enum:    
         - CommandReturnMessage    
       type: string    
@@ -193,7 +231,7 @@ CommandReturnMessage:
     - errors    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/blob/master/CommandReturnMessage/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/CommandReturnMessage/schema.json    
   x-model-tags: ""    
@@ -206,7 +244,7 @@ CommandReturnMessage:
 <!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### CommandReturnMessage NGSI-v2 key-values Ejemplo  
-Aquí hay un ejemplo de un CommandReturnMessage en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un CommandReturnMessage en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -244,7 +282,7 @@ CommandReturnMessage:
 ```  
 </details>  
 #### CommandReturnMessage NGSI-v2 normalizado Ejemplo  
-Este es un ejemplo de un CommandReturnMessage en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un CommandReturnMessage en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -302,7 +340,7 @@ CommandReturnMessage:
 ```  
 </details>  
 #### CommandReturnMessage NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de un CommandReturnMessage en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un CommandReturnMessage en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -345,7 +383,7 @@ CommandReturnMessage:
 ```  
 </details>  
 #### CommandReturnMessage NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de un CommandReturnMessage en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un CommandReturnMessage en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -414,7 +452,7 @@ CommandReturnMessage:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
