@@ -3,6 +3,7 @@
   "$schemaVersion": "0.0.1",
   "$id": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/StopCommandMessage/schema.json",
   "description": "Stop Command message",
+  "title": "Stop Command message ported to Smart Data Models",
   "modelTags": "",
   "type": "object",
   "properties": {
