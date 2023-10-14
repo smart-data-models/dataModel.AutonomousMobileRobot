@@ -4,6 +4,7 @@
   "type": "object",
   "$schemaVersion": "0.0.1",
   "description": "Stop Command Return Message",
+  "title": "Stop Command Return Message ported to Smart Data Models",
   "modelTags": "",
   "properties": {
     "type": {
