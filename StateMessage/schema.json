@@ -3,6 +3,7 @@
   "$schemaVersion": "0.0.1",
   "$id": "https://smart-data-models.github.io/dataModel.AutonomousMobileRobot/StateMessage/schema.json",
   "description": "State message",
+  "title": "State message ported to Smart Data Models",
   "modelTags": "",
   "type": "object",
   "properties": {
