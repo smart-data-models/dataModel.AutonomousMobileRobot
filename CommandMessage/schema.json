@@ -3,6 +3,7 @@
   "$schemaVersion": "0.0.1",
   "$id": "https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/CommandMessage/schema.json",
   "description": "Command message",
+  "title": "Command message ported to Smart Data Models",
   "modelTags": "",
   "type": "object",
   "properties": {
