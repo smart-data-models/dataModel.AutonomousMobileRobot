@@ -1,6 +1,6 @@
 {
   "id": "Robot:Mega_rover:01",
-  "type": "CommandMessageReturn",
+  "type": "CommandReturnMessage",
   "commandTime": {
     "type": "Date-Time",
     "value": "2019-06-07T08:39:42.921+09:00"
