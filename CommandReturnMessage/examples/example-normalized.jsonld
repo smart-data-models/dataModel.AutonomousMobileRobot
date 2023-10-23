@@ -1,6 +1,6 @@
 {
   "id": "urn:ngsi-ld:Robot:Mega_rover:01",
-  "type": "CommandMessageReturn",
+  "type": "CommandReturnMessage",
   "commandTime": {
     "type": "Property",
     "value": {
