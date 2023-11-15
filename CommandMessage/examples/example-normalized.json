@@ -2,7 +2,7 @@
   "id": "Robot:Mega_rover:01",
   "type": "CommandMessage",
   "commandTime": {
-    "type": "Date-Time",
+    "type": "DateTime",
     "value": "2019-06-07T08:39:40.064+09:00"
   },
   "command": {
@@ -10,7 +10,7 @@
     "value": "navi"
   },
   "waypoints": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "point2D": {
@@ -35,5 +35,4 @@
       }
     ]
   }
-
 }
