@@ -28,5 +28,7 @@
     }
   ],
   "result": "ack",
-  "errors": [""]
+  "errors": [
+    ""
+  ]
 }
