@@ -2,11 +2,11 @@
   "id": "Robot:Mega_rover:01",
   "type": "CommandReturnMessage",
   "commandTime": {
-    "type": "Date-Time",
+    "type": "DateTime",
     "value": "2019-06-07T08:39:42.921+09:00"
   },
   "receivedTime": {
-    "type": "Date-Time",
+    "type": "DateTime",
     "value": "2019-06-07T08:39:40.064+09:00"
   },
   "receivedCommand": {
@@ -14,7 +14,7 @@
     "value": "navi"
   },
   "receivedWaypoints": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "point2D": {
@@ -44,7 +44,7 @@
     "value": "ack"
   },
   "errors": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       ""
     ]
