@@ -1,2 +1,2 @@
 "id_", "type_", "commandTime__type_", "commandTime__value_", "command__type_", "command__value_", "waypoints__type_", "waypoints__value__0__point2D__x_", "waypoints__value__0__point2D__y_", "waypoints__value__1__point2D__x_", "waypoints__value__1__point2D__y_", "waypoints__value__2__point2D__x_", "waypoints__value__2__point2D__y_", "waypoints__value__2__orientation2D__theta_"
-"Robot:Mega_rover:01", "CommandMessage", "Date-Time", "2019-06-07T08:39:40.064+09:00", "Text", "navi", "array", "0.503", "0.0", "3.411", "0.0", "3.411", "2.81", "0.0"
+"Robot:Mega_rover:01", "CommandMessage", "DateTime", "2019-06-07T08:39:40.064+09:00", "Text", "navi", "StructuredValue", "0.503", "0.0", "3.411", "0.0", "3.411", "2.81", "0.0"
