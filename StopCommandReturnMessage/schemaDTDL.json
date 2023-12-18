@@ -1,0 +1,71 @@
+{
+    "@id": "dtmi:com:ngsi-ld:StopCommandReturnMessage;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Stop Command Return Message ported to Smart Data Models adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.AutonomousMobileRobot/master/StopCommandReturnMessage/schema.json",
+    "description": "Stop Command Return Message",
+    "displayName": "StopCommandReturnMessage",
+    "contents": [
+        {
+            "name": "commandTime",
+            "writable": true,
+            "displayName": "commandTime",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Sent time to the robot"
+        },
+        {
+            "name": "receivedTime",
+            "writable": true,
+            "displayName": "receivedTime",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Command received time to the robot"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "errors",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Describes the errors that occurred in the robot",
+            "displayName": "errors"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "receivedStopCommand",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "stop",
+                        "displayName": "stop",
+                        "enumValue": 1
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "resultsOfStopCommand",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "ack",
+                        "displayName": "ack",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "error",
+                        "displayName": "error",
+                        "enumValue": 2
+                    }
+                ]
+            }
+        }
+    ]
+}
