@@ -13,7 +13,7 @@
     "type": "Text",
     "value": "stop"
   },
-  "result": {
+  "resultsOfStopCommand": {
     "type": "Text",
     "value": "ack"
   },
