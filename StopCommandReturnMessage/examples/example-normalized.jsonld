@@ -19,7 +19,7 @@
     "type": "Property",
     "value": "stop"
   },
-  "result": {
+  "resultsOfStopCommand": {
     "type": "Property",
     "value": "ack"
   },
