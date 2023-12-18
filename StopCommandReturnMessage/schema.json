@@ -2,11 +2,14 @@
   "$schema": "http://json-schema.org/schema#",
   "$id": "https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/StopCommandReturnMessage/schema.json",
   "type": "object",
-  "$schemaVersion": "0.0.1",
+  "$schemaVersion": "0.0.2",
   "description": "Stop Command Return Message",
   "title": "Stop Command Return Message ported to Smart Data Models",
   "modelTags": "",
   "properties": {
+    "id": {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons/properties/id"
+    },
     "type": {
       "type": "string",
       "description": "Property. NGSI Entity type. It has to be StopCommandReturnMessage",
