@@ -1,2 +1,2 @@
-"id_", "type_", "commandTime_", "receivedTime_", "receivedStopCommand_", "result_"
+"id_", "type_", "commandTime_", "receivedTime_", "receivedStopCommand_", "resultsOfStopCommand_"
 "Robot:Mega_rover:01", "StopCommandReturnMessage", "2019-06-07T08:39:42.921+09:00", "2019-06-07T08:39:40.064+09:00", "stop", "ack"
