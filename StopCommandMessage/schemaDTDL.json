@@ -1,0 +1,33 @@
+{
+    "@id": "dtmi:com:ngsi-ld:StopCommandMessage;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Stop Command message ported to Smart Data Models adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.AutonomousMobileRobot/master/StopCommandMessage/schema.json",
+    "description": "Stop Command message",
+    "displayName": "StopCommandMessage",
+    "contents": [
+        {
+            "name": "commandTime",
+            "writable": true,
+            "displayName": "commandTime",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Sent time to the robot"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "stopCommand",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "stop",
+                        "displayName": "stop",
+                        "enumValue": 1
+                    }
+                ]
+            }
+        }
+    ]
+}
