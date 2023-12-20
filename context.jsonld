@@ -15,6 +15,7 @@
         "destination": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/destination",
         "errors": "ngsi-ld:errors",
         "geographicPoint": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/geographicPoint",
+        "id": "@id",
         "mapId": "https://smartdatamodels.org/dataModel.AutonomousMobileRobot/mapId",
         "mode": "ngsi-ld:mode",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
