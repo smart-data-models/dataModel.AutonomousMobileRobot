@@ -1,3 +1,3 @@
 /* (Beta) Export of data model StopCommandMessage of the subject dataModel.AutonomousMobileRobot for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE stopCommand_type AS ENUM ('stop');CREATE TYPE StopCommandMessage_type AS ENUM ('StopCommandMessage');
-CREATE TABLE StopCommandMessage (commandTime TIMESTAMP, stopCommand stopCommand_type, type StopCommandMessage_type);
+CREATE TABLE StopCommandMessage (commandTime TIMESTAMP, id TEXT PRIMARY KEY, stopCommand stopCommand_type, type StopCommandMessage_type);
