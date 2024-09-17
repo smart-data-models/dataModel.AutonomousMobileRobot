@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://smart-data-models.github.io/datamodel.AutonomousMobileRobot/StopCommandReturnMessage/schema.json",
   "type": "object",
   "$schemaVersion": "0.0.2",
@@ -20,7 +20,7 @@
     "commandTime": {
       "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.AutonomousMobileRobot/master/AutonomousMobileRobot-schema.json#/definitions/commandTime"
     },
-    "receivedTime":{
+    "receivedTime": {
       "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.AutonomousMobileRobot/master/AutonomousMobileRobot-schema.json#/definitions/receivedTime"
     },
     "receivedStopCommand": {
